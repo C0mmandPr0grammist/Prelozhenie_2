@@ -6,11 +6,18 @@ namespace News
 {
     public partial class App : Application
     {
+        bool isCust = true;
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            if(isCust)
+            {
+                MainPage = new NavigationPage(new Customer.MainPage());
+            } else
+            {
+                MainPage = new NavigationPage(new MainPage());
+            }
         }
 
         protected override void OnStart()

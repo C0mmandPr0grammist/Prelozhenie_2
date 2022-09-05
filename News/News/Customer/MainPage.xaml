@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.Customer.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="map.png"
+             x:Name="content">
+    <StackLayout>
+        <AbsoluteLayout HorizontalOptions="Center">
+            <Image Source="header.png" HeightRequest="39" HorizontalOptions="Center"/>
+            <FlexLayout AlignItems="Center" VerticalOptions="CenterAndExpand" Padding="30, 0, 30, 0" >
+                <FlexLayout FlexLayout.Grow="1" AlignItems="Center">
+                    <Image Source="coin_header.png" Margin="0, 0, 10, 0"/>
+                    <Label x:Name="labelHeight" Text="1200" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+                </FlexLayout>
+                <FlexLayout JustifyContent="End" AlignItems="Center" FlexLayout.Grow="1">
+                    <Image Source="mmr_header.png" Margin="0, 0, 10, 0"/>
+                    <Label Text="1800" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+                </FlexLayout>
+            </FlexLayout>
+        </AbsoluteLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Button BackgroundColor="Red" WidthRequest="50" HeightRequest="50" CornerRadius="50" Text="Я" TextColor="White"/>
+        </StackLayout>
+        <Frame VerticalOptions="EndAndExpand" Margin="36, 0, 36, 26" HeightRequest="70" BackgroundColor="#222" Padding="15, 0" CornerRadius="25">
+            <FlexLayout  Padding="0" JustifyContent="SpaceBetween" AlignItems="Center">
+                <ImageButton Clicked="OpenSupport" WidthRequest="45" BackgroundColor="Transparent" Source="support.png"/>
+                <ImageButton Clicked="OpenProfile" WidthRequest="45" BackgroundColor="Transparent" Source="profile.png"/>
+                <ImageButton Clicked="OpenListOrder" WidthRequest="45" BackgroundColor="Transparent" Source="list_order.png"/>
+                <ImageButton x:Name="image_button" Clicked="image_button_Clicked" WidthRequest="66" Source="frog.png" BackgroundColor="Transparent" />
+            </FlexLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
