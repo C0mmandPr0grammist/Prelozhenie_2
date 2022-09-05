@@ -1,24 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="News.MainPage">
+             x:Class="News.MainPage"
+             BackgroundImageSource="map.png"
+             x:Name="content">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <AbsoluteLayout HorizontalOptions="Center">
+            <Image Source="header.png" HeightRequest="39" HorizontalOptions="Center"/>
+            <FlexLayout AlignItems="Center" VerticalOptions="CenterAndExpand" Padding="30, 0, 30, 0" >
+                <FlexLayout FlexLayout.Grow="1" AlignItems="Center">
+                    <Image Source="coin_header.png" Margin="0, 0, 10, 0"/>
+                    <Label x:Name="labelHeight" Text="1200" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+                </FlexLayout>
+                <FlexLayout JustifyContent="End" AlignItems="Center" FlexLayout.Grow="1">
+                    <Image Source="mmr_header.png" Margin="0, 0, 10, 0"/>
+                    <Label Text="1800" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+                </FlexLayout>
+            </FlexLayout>
+        </AbsoluteLayout>
+        <Frame IsVisible="False" x:Name="Frame_Menu" Scale="0" VerticalOptions="CenterAndExpand" Margin="36, 0, 36, 0" Padding="10" BackgroundColor="White" CornerRadius="20">
+
+            <StackLayout Background="White">
+                <Image Source="warning.png" HorizontalOptions="CenterAndExpand" Margin="0, 0, 0, 30"/>
+                <Label FontFamily="Comfortaa" HorizontalOptions="Center" TextColor="Black" Text="Работа?" Margin="0, 0, 0, 20"/>
+                <Picker Margin="0, 0, 0, 50" x:Name="picker_menu" WidthRequest="120" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="Comfortaa">
+                    <Picker.Items>
+                        <x:String>Смена 8ч</x:String>
+                        <x:String>Смена 6ч</x:String>
+                        <x:String>Смена 4ч</x:String>
+                        <x:String>Смена 2ч</x:String>
+                    </Picker.Items>
+                </Picker>
+                <FlexLayout WidthRequest="200" HorizontalOptions="Center" JustifyContent="SpaceBetween">
+                    <Button Clicked="Button_Clicked" BorderColor="Black" BorderWidth="1" BackgroundColor="White" FontFamily="Comfortaa" Text="Нет" CornerRadius="20"/>
+                    <Button Clicked="Start_Timer" BackgroundColor="#f87400" TextColor="White" FontFamily="Comfortaa" Text="Да" CornerRadius="20"/>
+                </FlexLayout>
+            </StackLayout>
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+        <!--<Frame VerticalOptions="EndAndExpand" Padding="0"  Margin="37, 0, 37, 26" BackgroundColor="#222" WidthRequest="302" HeightRequest="70" CornerRadius="20">
+            <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center">
+                <ImageButton Clicked="OpenSupport" Source="support.png" WidthRequest="45" HeightRequest="45" FlexLayout.Grow="1" BackgroundColor="Transparent"/>
+                <ImageButton Clicked="OpenProfile" Source="profile.png" WidthRequest="45" HeightRequest="45" FlexLayout.Grow="1" BackgroundColor="Transparent"/>
+                <ImageButton Clicked="OpenListOrder" Source="list_order.png" WidthRequest="45" HeightRequest="45" FlexLayout.Grow="1" BackgroundColor="Transparent"/>
+                <ImageButton  Source="frog.png" WidthRequest="66" HeightRequest="66" FlexLayout.Grow="1" BackgroundColor="Transparent"/>
+            </FlexLayout>
+        </Frame>-->
+
+        <Frame VerticalOptions="EndAndExpand" Margin="36, 0, 36, 26" HeightRequest="70" BackgroundColor="#222" Padding="15, 0" CornerRadius="25">
+            <FlexLayout  Padding="0" JustifyContent="SpaceBetween" AlignItems="Center">
+                <ImageButton Clicked="OpenSupport" WidthRequest="45" BackgroundColor="Transparent" Source="support.png"/>
+                <ImageButton Clicked="OpenProfile" WidthRequest="45" BackgroundColor="Transparent" Source="profile.png"/>
+                <ImageButton Clicked="OpenListOrder" WidthRequest="45" BackgroundColor="Transparent" Source="list_order.png"/>
+                <ImageButton x:Name="image_button" Clicked="Button_Clicked" WidthRequest="55" Source="frog.png" BackgroundColor="Transparent" />
+                <Button BackgroundColor="#e06b05" IsVisible="False" x:Name="Button_Timer" BorderColor="Black" BorderWidth="1" CornerRadius="50" WidthRequest="55" HeightRequest="55" />
+            </FlexLayout>
+        </Frame>
     </StackLayout>
 
 </ContentPage>

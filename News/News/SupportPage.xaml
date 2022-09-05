@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.SupportPage"
+             x:Name="content_Page"
+             BackgroundColor="Transparent">
+    <Frame Padding="30, 24" BackgroundColor="#212121" CornerRadius="20" x:Name="Frame_Support">
+        <Frame.GestureRecognizers>
+            <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"/>
+        </Frame.GestureRecognizers>
+        <StackLayout>
+            <StackLayout Margin="0, 0, 0, 40" x:Name="Top_content">
+                <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
+                    <ImageButton Clicked="Back" Rotation="180" x:Name="arrow_Btn" Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                    <Label Text="Поддержка" TextColor="White" FontSize="Title" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontFamily="Comfortaa"/>
+                </FlexLayout>
+
+                <Frame CornerRadius="20" Padding="15" x:Name="Frame" BackgroundColor="#333">
+                    <StackLayout>
+                        <StackLayout WidthRequest="150" Margin="30, 0, 0, 10" HorizontalOptions="Center" Orientation="Horizontal" x:Name="flex">
+                            <Image Source="frog_tab.png" WidthRequest="80" HorizontalOptions="CenterAndExpand" />
+                            <ImageButton VerticalOptions="Center" Clicked="To_chat" Source="message.png" WidthRequest="30" BackgroundColor="#333"/>
+                        </StackLayout>
+                        <Label Text="Приветствую!" TextColor="White" FontSize="22" HorizontalTextAlignment="Center" FontFamily="Comfortaa"/>
+                        <Label 
+                        Text="Здесь вы можете направить любой вопрос в техническую поддержку. Прежде чем это делать рекомендуем ознакомиться с частыми вопросами. Возможно, на ваш уже ответили."
+                        TextColor="White" FontFamily="Comfortaa" HorizontalTextAlignment="Center" FontSize="18"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <Frame CornerRadius="25" BackgroundColor="#333" Padding="10" Margin="0, 0, 0, 20">
+                <FlexLayout>
+                    <StackLayout FlexLayout.Grow="1">
+                        <Label Text="Частые вопросы" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa"/>
+                        <BoxView WidthRequest="30" HeightRequest="30" BackgroundColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout FlexLayout.Grow="1">
+                        <Label Text="Соглашение" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa"/>
+                        <BoxView WidthRequest="30" HeightRequest="30" BackgroundColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </FlexLayout>
+            </Frame>
+
+            <FlexLayout AlignItems="Center" Margin="0, 0, 0, 30">
+                <BoxView CornerRadius="50" WidthRequest="50" HeightRequest="50" BackgroundColor="White" Margin="0, 0, 20, 0"/>
+                <Label Text="8-914-779-02-38" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+            </FlexLayout>
+            <FlexLayout AlignItems="Center" Margin="0, 0, 0, 30">
+                <BoxView CornerRadius="50" WidthRequest="50" HeightRequest="50" BackgroundColor="White" Margin="0, 0, 20, 0"/>
+                <Label Text="work@yandex.ru" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+            </FlexLayout>
+
+        </StackLayout>
+    </Frame>
+</ContentPage>

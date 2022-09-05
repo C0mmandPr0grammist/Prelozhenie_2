@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ListOrderPage"
+             BackgroundColor="Transparent"
+             x:Name="content_Page">
+    <ContentPage.Content>
+        <Frame CornerRadius="15" x:Name="frame_Content" Padding="30, 24" BackgroundColor="#333">
+            <Frame.GestureRecognizers>
+                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"/>
+            </Frame.GestureRecognizers>
+            <StackLayout>
+                <FlexLayout AlignItems="Center" Margin="0, 0, 0, 30">
+                    <ImageButton Clicked="Back" Rotation="180" x:Name="arrow_Btn" Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                    <Label Text="Текущие заказы" HorizontalTextAlignment="Center" FontSize="Title" TextColor="White" FontFamily="Comfortaa" FlexLayout.Grow="1" HorizontalOptions="Center"/>
+                </FlexLayout>
+                <StackLayout Margin="0, 0, 0, 50">
+                    <ListView x:Name="list" ItemTapped="ListView_ItemTapped" ItemsSource="{Binding currentOrders}" RowHeight="60">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <FlexLayout AlignItems="Center">
+                                        <Frame Margin="0, 0, 10, 0" Padding="0" WidthRequest="50" HeightRequest="50" CornerRadius="50" BorderColor="Orange">
+                                            <Image WidthRequest="100" HeightRequest="80" Aspect="AspectFill" Source="{Binding Img}"/>
+                                        </Frame>
+                                        <Label WidthRequest="180" Text="{Binding Address}" TextColor="White" FontFamily="Comfortaa"/>
+                                        <Label WidthRequest="70" Text="{Binding Price}" TextColor="White" FontSize="18" Margin="0, 0, 10, 0"/>
+                                        <ImageButton Source="message.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                                    </FlexLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Выполненные" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="White" FontSize="Title" FontFamily="Comfortaa" Margin="0, 0, 0, 30"/>
+                    <ScrollView>
+                        <StackLayout>
+                            <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
+                                <Frame Margin="0, 0, 10, 0" Padding="0" WidthRequest="50" HeightRequest="50" CornerRadius="50" BorderColor="Orange">
+                                    <Image WidthRequest="100" HeightRequest="80" Aspect="AspectFill" Source="man.png"/>
+                                </Frame>
+                                <Label WidthRequest="180" Text="Проспект Мира 31," TextColor="White" FontFamily="Comfortaa"/>
+                                <Label Text="7700р" TextColor="White" FontSize="18" Margin="0, 0, 10, 0"/>
+                                <ImageButton Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                            </FlexLayout>
+                            <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
+                                <Frame Margin="0, 0, 10, 0" Padding="0" WidthRequest="50" HeightRequest="50" CornerRadius="50" BorderColor="Orange">
+                                    <Image WidthRequest="100" HeightRequest="80" Aspect="AspectFill" Source="man.png"/>
+                                </Frame>
+                                <Label WidthRequest="180" Text="Проспект Мира 31," TextColor="White" FontFamily="Comfortaa"/>
+                                <Label Text="7700р" TextColor="White" FontSize="18" Margin="0, 0, 10, 0"/>
+                                <ImageButton Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

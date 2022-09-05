@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfilePage"
+             x:Name="content_Page"
+             BackgroundColor="Transparent">
+    <ContentPage.Content>
+        <Frame x:Name="frame_Profile" Padding="30, 24" BackgroundColor="#212121" CornerRadius="15">
+            <Frame.GestureRecognizers>
+                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"/>
+            </Frame.GestureRecognizers>
+            <StackLayout>
+                <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
+                    <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20"/>
+                    <Label Text="Профиль" TextColor="White" FontFamily="Comfortaa" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Title"/>
+                </FlexLayout>
+                <Frame Margin="0, 0, 0, 30" BackgroundColor="#333" CornerRadius="20">
+                    <StackLayout>
+                        <ImageButton Source="man.png" CornerRadius="50" BackgroundColor="Transparent" Aspect="AspectFill" WidthRequest="100" HeightRequest="100" BorderColor="Orange" BorderWidth="3" HorizontalOptions="Center"/>
+                        <Label Text="Александр Краков" TextColor="White" FontSize="Subtitle" FontFamily="Comfortaa" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout>
+                    <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
+                        <Image Margin="0, 0, 30, 0" Source="time.png" WidthRequest="50" HeightRequest="50"/>
+                        <Label Text="Смена 8 часов" TextColor="White" FontFamily="Comfortaa" FontSize="20"/>
+                    </FlexLayout>
+                    <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
+                        <Image Margin="0, 0, 30, 0" Source="mmr.png" WidthRequest="50" HeightRequest="50"/>
+                        <Label Text="2500" TextColor="White" FontFamily="Comfortaa" FontSize="20"/>
+                    </FlexLayout>
+                    <FlexLayout Margin="0, 0, 0, 50" AlignItems="Center">
+                        <Image Margin="0, 0, 30, 0" Source="coin.png" WidthRequest="50" HeightRequest="50"/>
+                        <Label Text="1000" TextColor="White" FontFamily="Comfortaa" FontSize="20"/>
+                    </FlexLayout>
+                </StackLayout>
+
+                <StackLayout>
+                    <Frame CornerRadius="20" Padding="0">
+                        <FlexLayout BackgroundColor="White">
+                            <StackLayout Padding="7" BackgroundColor="#333333" FlexLayout.Grow="1" Margin="0, 0, 1, 0">
+                                <Label FontSize="14" HorizontalTextAlignment="Center" TextColor="White" Text="Выполнено" FontFamily="Comfortaa"/>
+                                <Label FontSize="26" HorizontalTextAlignment="Center" TextColor="White" Text="30" FontFamily="Comfortaa"/>
+                            </StackLayout>
+                            <StackLayout Padding="7" BackgroundColor="#333333" FlexLayout.Grow="1" Margin="0, 0, 1, 0">
+                                <Label FontSize="14" HorizontalTextAlignment="Center" TextColor="White" Text="Выполнено" FontFamily="Comfortaa"/>
+                                <Label FontSize="26" HorizontalTextAlignment="Center" TextColor="White" Text="30" FontFamily="Comfortaa"/>
+                            </StackLayout>
+                            <StackLayout Padding="7" BackgroundColor="#333333" FlexLayout.Grow="1">
+                                <Label FontSize="14" HorizontalTextAlignment="Center" TextColor="White" Text="Выполнено" FontFamily="Comfortaa"/>
+                                <Label FontSize="26" HorizontalTextAlignment="Center" TextColor="White" Text="30" FontFamily="Comfortaa"/>
+                            </StackLayout>
+                        </FlexLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
