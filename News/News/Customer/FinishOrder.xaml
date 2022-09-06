@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.Customer.FinishOrder"
+             BackgroundColor="#212121"
+             NavigationPage.HasNavigationBar="False">
+    <FlexLayout Direction="Column" >
+        <StackLayout Padding="30, 24">
+            <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
+                <ImageButton Clicked="Back" WidthRequest="20" HeightRequest="20" Source="arrow.png" BackgroundColor="Transparent"/>
+                <Label Text="Разместить" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontFamily="Comfortaa" TextColor="White" FontSize="24"/>
+            </FlexLayout>
+        </StackLayout>
+
+        <Frame FlexLayout.AlignSelf="Center" Margin="30, 0, 30, 15" BackgroundColor="#313131" CornerRadius="20" WidthRequest="300" HorizontalOptions="Center">
+            <StackLayout>
+                <ImageButton BorderWidth="3" BorderColor="Orange" Source="man.png" BackgroundColor="Black" WidthRequest="100" HorizontalOptions="Center" Aspect="AspectFill" HeightRequest="100" CornerRadius="50"/>
+                <Label Text="Александр Краков" TextColor="White" FontFamily="Comfortaa" FontSize="25" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+
+        <StackLayout Padding="30, 24" FlexLayout.Grow="1">
+            <FlexLayout AlignItems="Center">
+                <Image WidthRequest="150" Margin="0, 0, 20, 0" Source="house_black.png"/>
+                <Label TextColor="White" FontFamily="Comfortaa" FontSize="20" Text="Проспект Мира 31, подъезд 2, дом 2, кв 90"/>
+            </FlexLayout>
+            <FlexLayout AlignItems="Center" Margin="0, -20, 0, 0">
+                <Image WidthRequest="65" Margin="0, 0, 20, 0" Source="mmr_black.png"/>
+                <Label TextColor="White" FontFamily="Comfortaa" FontSize="20" Text="16/09/2022 14:00"/>
+            </FlexLayout>
+        </StackLayout>
+
+        <ScrollView FlexLayout.Grow="1" TranslationY="15">
+            <Frame BackgroundColor="#313131" Padding="30, 24, 30, 15" x:Name="corner_frame" CornerRadius="20">
+                <StackLayout>
+                    <ImageButton Margin="0, 0, 0, 15" x:Name="image_Source" Clicked="ImageButton_Clicked" BackgroundColor="Transparent" Source="toilet.png"/>
+                    <BoxView HeightRequest="1" BackgroundColor="White"/>
+                    <FlexLayout Padding="20, 0" JustifyContent="SpaceBetween" AlignItems="Center">
+                        <Label Text="Итог:" TextColor="White" FontFamily="Comfortaa" FontSize="22"/>
+                        <Label Text="2000р" TextColor="White" FontFamily="Comfortaa" FontSize="30"/>
+                    </FlexLayout>
+                    <Button Clicked="To_Cassa" BackgroundColor="#F87400" TextColor="White" HorizontalOptions="Center" WidthRequest="200" Text="Готово!" CornerRadius="20" TextTransform="None" />
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </FlexLayout>
+</ContentPage>

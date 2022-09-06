@@ -13,7 +13,7 @@
                 <FlexLayout Margin="0, 0, 0, 10" JustifyContent="SpaceBetween" AlignItems="Center">
                     <ImageButton Clicked="Back" x:Name="arrow_Btn" Rotation="180" Source="arrow.png" BackgroundColor="#212121" WidthRequest="20" HeightRequest="20"/>
                     <Label Text="Ваша заявка" FontSize="26" TextColor="White" FontFamily="Comfortaa" />
-                    <ImageButton FlexLayout.AlignSelf="End" Source="message.png" BackgroundColor="#212121" WidthRequest="35"/>
+                    <ImageButton FlexLayout.AlignSelf="End" Source="message.png" Clicked="OpenChat" BackgroundColor="#212121" WidthRequest="35"/>
                 </FlexLayout>
 
                 <FlexLayout AlignItems="Center">

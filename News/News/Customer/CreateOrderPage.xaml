@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.Customer.CreateOrderPage"
+             BackgroundColor="#212121"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Padding="30, 24">
+        <FlexLayout AlignItems="Center" Margin="0, 0, 0, 30">
+            <ImageButton Clicked="Back" Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Rotation="90"/>
+            <Label FlexLayout.Grow="1" HorizontalOptions="Center" x:Name="label_Category" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa" FontSize="22"/>
+        </FlexLayout>
+
+        <AbsoluteLayout Margin="0, 0, 0, 30" HorizontalOptions="Center">
+            <Image x:Name="empty" AbsoluteLayout.LayoutBounds="0, 0, 300, 300" Source="toiletBig.png"/>
+            <Image IsVisible="False" x:Name="draw" AbsoluteLayout.LayoutBounds="0, 0, 300, 300" Source="toilet_draw.png"/>
+        </AbsoluteLayout>
+        <StackLayout>
+            <FlexLayout Margin="0, 0, 0, 20"  AlignItems="Center">
+                <FlexLayout FlexLayout.Grow="1" AlignItems="Center">
+                    <Image Margin="0, 0, 10, 0" Source="tick.png" WidthRequest="30"/>
+                    <Label VerticalTextAlignment="Center" TextColor="White" FontSize="16" FontFamily="Comfortaa" Text="Замена гофры"/>
+                </FlexLayout>
+                <Label Text="Выполнено" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+            </FlexLayout>
+            <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
+                <FlexLayout FlexLayout.Grow="1" AlignItems="Center">
+                    <Image Margin="0, 0, 10, 0" Source="tick.png" WidthRequest="30"/>
+                    <Label VerticalTextAlignment="Center" TextColor="White" FontSize="16" FontFamily="Comfortaa" Text="Настройка бочка"/>
+                </FlexLayout>
+                <Label Text="Выполнено" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+            </FlexLayout>
+            <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
+                <FlexLayout FlexLayout.Grow="1" AlignItems="Center">
+                    <Image Margin="0, 0, 10, 0" Source="tick.png" WidthRequest="30"/>
+                    <Label VerticalTextAlignment="Center" TextColor="White" FontSize="16" FontFamily="Comfortaa" Text="Замена подводки"/>
+                </FlexLayout>
+                <Label Text="Выполнено" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+            </FlexLayout>
+            <ListView ItemsSource="{Binding optional}" x:Name="list" ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
+                                <FlexLayout FlexLayout.Grow="1" AlignItems="Center">
+                                    <Image x:Name="BTN" BackgroundColor="Transparent" Margin="0, 0, 10, 0" Source="{Binding Img}" WidthRequest="30"/>
+                                    <Label VerticalTextAlignment="Center" TextColor="White" FontSize="16" FontFamily="Comfortaa" Text="{Binding Text}"/>
+                                </FlexLayout>
+                                <Label Text="500р" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+                            </FlexLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+
+        <StackLayout>
+            <BoxView HeightRequest="1" BackgroundColor="White"/>
+            <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center" Padding="20, 0">
+                <Label Text="Итог:" TextColor="White" FontFamily="Comfortaa" FontSize="22"/>
+                <Label Text="2000р" TextColor="White" FontFamily="Comfortaa" FontSize="30"/>
+            </FlexLayout>
+        </StackLayout>
+        <Button Clicked="To_FinishOrder" BackgroundColor="#F87400" TextColor="White" HorizontalOptions="Center" WidthRequest="200" Text="Готово!" CornerRadius="20" TextTransform="None"/>
+    </StackLayout>
+</ContentPage>

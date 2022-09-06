@@ -56,7 +56,7 @@ namespace News.Customer
         {
             OrderList selectedOrder = e.Item as OrderList;
             listOrder.SelectedItem = null;
-            //await Navigation.PushAsync(new C_CreateOrderPage(selectedOrder, true));
+            await Navigation.PushAsync(new CreateOrderPage(selectedOrder, true));
         }
 
         private void Entry_Focused(object sender, FocusEventArgs e)

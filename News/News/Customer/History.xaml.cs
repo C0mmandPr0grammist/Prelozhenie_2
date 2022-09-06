@@ -74,10 +74,15 @@ namespace News.Customer
             await Navigation.PopModalAsync();
         }
 
-        private void list_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void list_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             OrderList selectedOrder = e.Item as OrderList;
             list.SelectedItem = null;
+            await Navigation.PushAsync(new CreateOrderPage(selectedOrder, false));
+        }
+        private async void OpenChat(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Chat("man.png", "Александр"));
         }
     }
 

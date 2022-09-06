@@ -10,6 +10,7 @@ using Xamarin.Forms.Platform.Android;
 using Android.Content;
 using News.Droid;
 
+
 [assembly: ExportRenderer(typeof(Entry), typeof(CustomEntryRenderer))]
 
 namespace News.Droid

@@ -67,9 +67,9 @@ namespace News
             await Navigation.PopModalAsync();
         }
 
-        private void To_chat(object sender, EventArgs e)
+        private async void To_chat(object sender, EventArgs e)
         {
-
+            await Navigation.PushModalAsync(new Chat("frog.png", "Поддержка"));
         }
     }
 }
