@@ -24,10 +24,10 @@
         </StackLayout>
         <Frame VerticalOptions="EndAndExpand" Margin="36, 0, 36, 26" HeightRequest="70" BackgroundColor="#222" Padding="15, 0" CornerRadius="25">
             <FlexLayout  Padding="0" JustifyContent="SpaceBetween" AlignItems="Center">
-                <ImageButton Clicked="OpenSupport" WidthRequest="45" BackgroundColor="Transparent" Source="support.png"/>
-                <ImageButton Clicked="OpenProfile" WidthRequest="45" BackgroundColor="Transparent" Source="profile.png"/>
-                <ImageButton Clicked="OpenListOrder" WidthRequest="45" BackgroundColor="Transparent" Source="list_order.png"/>
-                <ImageButton x:Name="image_button" Clicked="image_button_Clicked" WidthRequest="66" Source="frog.png" BackgroundColor="Transparent" />
+                <ImageButton Clicked="OpenSupport" WidthRequest="45" FlexLayout.Grow="1" BackgroundColor="Transparent" Source="support.png"/>
+                <ImageButton Clicked="OpenProfile" WidthRequest="45" FlexLayout.Grow="1" BackgroundColor="Transparent" Source="profile.png"/>
+                <ImageButton Clicked="OpenListOrder" WidthRequest="45" FlexLayout.Grow="1" BackgroundColor="Transparent" Source="list_order.png"/>
+                <ImageButton x:Name="image_button" Clicked="image_button_Clicked" FlexLayout.Grow="1" WidthRequest="66" Source="frog.png" BackgroundColor="Transparent" />
             </FlexLayout>
         </Frame>
     </StackLayout>
