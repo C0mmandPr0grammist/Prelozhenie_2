@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.Begin._1"
+             BackgroundImageSource="fon.png"
+             NavigationPage.HasNavigationBar="False"
+             x:Name="content" Opacity="1">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <Image Source="frog_start.png" />
+            <Image Source="start_frame.png"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

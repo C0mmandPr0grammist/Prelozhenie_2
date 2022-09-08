@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.Begin.ChangeRole"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="fon.png"
+             x:Name="content">
+    <ContentPage.Content>
+        <StackLayout Padding="20, 24">
+            <ImageButton Clicked="Back" HorizontalOptions="Start" Source="arrow_start.png"/>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Image Source="frog_start.png"/>
+                <Image Source="hand.png" x:Name="hand" HorizontalOptions="EndAndExpand"/>
+                <FlexLayout Padding="16, 0" JustifyContent="SpaceBetween">
+                    <Frame CornerRadius="20" Padding="15"  WidthRequest="120" HeightRequest="160" BackgroundColor="#1A1A1A">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ExecutorOpen"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Label HorizontalTextAlignment="Center" FontSize="16" FontAttributes="Bold" TextColor="White" FontFamily="Comfortaa" Text="Исполнитель"/>
+                            <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa" Text="DOB"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame CornerRadius="20" WidthRequest="120" Padding="15" HeightRequest="160" BackgroundColor="#1A1A1A">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Label HorizontalTextAlignment="Center"  FontSize="16" FontAttributes="Bold" TextColor="White" FontFamily="Comfortaa" Text="Заказчик"/>
+                            <Label VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa" Text="DOB"/>
+                        </StackLayout>
+                    </Frame>
+                </FlexLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

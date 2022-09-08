@@ -24,12 +24,11 @@ namespace News.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+   
             SetContentView(Resource.Drawable.SplashAnimation);
 
             var animationView = FindViewById<LottieAnimationView>(Resource.Id.animation_view);
             animationView.AddAnimatorListener(this);
-
-            // Create your application here
         }
 
         public void OnAnimationCancel(Animator animator)
@@ -38,17 +37,17 @@ namespace News.Droid
 
         public void OnAnimationStart(Animator animator)
         {
-            
         }
 
         public void OnAnimationEnd(Animator animator)
         {
-
+            
         }
 
         public void OnAnimationRepeat(Animator animator)
         {
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
         }
+        
     }
 }
