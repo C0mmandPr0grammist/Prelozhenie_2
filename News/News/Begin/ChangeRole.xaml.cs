@@ -1,4 +1,5 @@
-﻿using System;
+﻿using News.Education;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,7 +39,7 @@ namespace News.Begin
                 down = true;
             }
         }
-        private async void ExecutorOpen(object sender, TappedEventArgs e)
+        private async void ExecutorOpen(object sender, EventArgs e)
         {
             await content.FadeTo(0, 200);
             await Navigation.PushModalAsync(new Exec1(), false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using News.Education;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -15,9 +16,13 @@ namespace News
         public bool isOpenMenu = true;
         DateTime end;
         TimeSpan time;
-        public MainPage()
+        public MainPage(bool first)
         {
             InitializeComponent();
+            if(first)
+            {
+                Navigation.PushModalAsync(new EducationExec1(), false);
+            }
         }
 
         private async void Start_Timer(object sender, EventArgs e)

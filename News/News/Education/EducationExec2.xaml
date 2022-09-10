@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.Education.EducationExec2"
+             x:Name="content">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </StackLayout.GestureRecognizers>
+            <StackLayout VerticalOptions="StartAndExpand">
+                <AbsoluteLayout HorizontalOptions="Center">
+                    <Image Source="header.png" HeightRequest="39" HorizontalOptions="Center"/>
+                    <FlexLayout AlignItems="Center" VerticalOptions="CenterAndExpand" Padding="30, 0, 30, 0" >
+                        <FlexLayout FlexLayout.Grow="1" AlignItems="Center">
+                            <Image Source="coin_header.png" Margin="0, 0, 10, 0"/>
+                            <Label x:Name="labelHeight" Text="1200" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+                        </FlexLayout>
+                        <FlexLayout JustifyContent="End" AlignItems="Center" FlexLayout.Grow="1">
+                            <Image Source="mmr_header.png" Margin="0, 0, 10, 0"/>
+                            <Label Text="1800" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
+                        </FlexLayout>
+                    </FlexLayout>
+                </AbsoluteLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Image Source="educationExec_one.png" HorizontalOptions="CenterAndExpand"/>
+                <Frame VerticalOptions="EndAndExpand" Margin="36, 0, 36, 26" HeightRequest="70" BackgroundColor="Transparent" Padding="15, 0" CornerRadius="25">
+                    <FlexLayout  Padding="0" JustifyContent="SpaceBetween" AlignItems="Center">
+                        <ImageButton Opacity="0" WidthRequest="45" BackgroundColor="Transparent" Source="support.png"/>
+                        <ImageButton Opacity="0" WidthRequest="45" BackgroundColor="Transparent" Source="profile.png"/>
+                        <ImageButton Opacity="1" WidthRequest="45" BackgroundColor="Transparent" Source="list_order.png"/>
+                        <ImageButton Opacity="0" x:Name="image_button" WidthRequest="55" Source="frog.png" BackgroundColor="Transparent" />
+                    </FlexLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

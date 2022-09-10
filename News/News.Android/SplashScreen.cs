@@ -29,6 +29,7 @@ namespace News.Droid
 
             var animationView = FindViewById<LottieAnimationView>(Resource.Id.animation_view);
             animationView.AddAnimatorListener(this);
+
         }
 
         public void OnAnimationCancel(Animator animator)
@@ -41,7 +42,7 @@ namespace News.Droid
 
         public void OnAnimationEnd(Animator animator)
         {
-            
+
         }
 
         public void OnAnimationRepeat(Animator animator)

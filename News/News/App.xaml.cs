@@ -7,8 +7,8 @@ namespace News
 {
     public partial class App : Application
     {
-        bool isCust = true;
-        bool isAuth = false;
+        bool isCust = false;
+        bool isAuth = true;
         public App()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace News
                 }
                 else
                 {
-                    MainPage = new NavigationPage(new MainPage());
+                    MainPage = new NavigationPage(new MainPage(true));
                 }
             } else
             {
