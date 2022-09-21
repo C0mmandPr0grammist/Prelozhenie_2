@@ -19,11 +19,11 @@ namespace News
 
                 if (isCust)
                 {
-                    MainPage = new NavigationPage(new Customer.MainPage());
+                    MainPage = new NavigationPage(new Customer.MainPage(false));
                 }
                 else
                 {
-                    MainPage = new NavigationPage(new MainPage(true));
+                    MainPage = new NavigationPage(new MainPage(false));
                 }
             } else
             {

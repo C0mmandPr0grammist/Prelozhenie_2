@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.Education.EducationCust2" x:Name="content">
+    <StackLayout VerticalOptions="End">
+        <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+        </StackLayout.GestureRecognizers>
+        <Image Source="educationExec_one.png" HorizontalOptions="CenterAndExpand"/>
+        <Frame VerticalOptions="EndAndExpand" Margin="36, 0, 36, 26" HeightRequest="70" BackgroundColor="Transparent" Padding="15, 0" CornerRadius="25">
+            <FlexLayout  Padding="0" JustifyContent="SpaceBetween" AlignItems="Center">
+                <ImageButton Opacity="0" WidthRequest="45" BackgroundColor="Transparent" Source="support.png"/>
+                <ImageButton Opacity="0" WidthRequest="45" BackgroundColor="Transparent" Source="profile.png"/>
+                <ImageButton Opacity="1" WidthRequest="45" BackgroundColor="Transparent" Source="list_order.png"/>
+                <ImageButton Opacity="0" x:Name="image_button" WidthRequest="55" Source="frog.png" BackgroundColor="Transparent" />
+            </FlexLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

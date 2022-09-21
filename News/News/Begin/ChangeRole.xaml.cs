@@ -44,6 +44,11 @@ namespace News.Begin
             await content.FadeTo(0, 200);
             await Navigation.PushModalAsync(new Exec1(), false);
         }
+        private async void CustomerOpen(object sender, EventArgs e)
+        {
+            await content.FadeTo(0, 200);
+            await Navigation.PushModalAsync(new Cust1(), false);
+        }
         private async void Back(object sender, EventArgs e)
         {
             await content.FadeTo(0, 250);

@@ -19,6 +19,7 @@ namespace News.Customer
 
         private async void Back(object sender, EventArgs e)
         {
+            arrowBtn.RotateTo(180, 100);
             await Navigation.PopModalAsync();
         }
 

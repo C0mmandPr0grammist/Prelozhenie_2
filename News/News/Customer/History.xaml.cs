@@ -71,14 +71,24 @@ namespace News.Customer
 
         private async void Back(object sender, EventArgs e)
         {
-            await Navigation.PopModalAsync();
+            if(arrow_Btn.Rotation == 0)
+            {
+                arrow_Btn.RotateTo(180, 100);
+                await Navigation.PopModalAsync();
+            } else
+            {
+                await contentOrder.TranslateTo(0, 0, 150, Easing.CubicOut);
+                frame_Order.CornerRadius = 0;
+                await arrow_Btn.RotateTo(0, 100);
+            }
+            
         }
 
         private async void list_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             OrderList selectedOrder = e.Item as OrderList;
             list.SelectedItem = null;
-            await Navigation.PushAsync(new CreateOrderPage(selectedOrder, false));
+            await Navigation.PushModalAsync(new CreateOrderPage(selectedOrder, false));
         }
         private async void OpenChat(object sender, EventArgs e)
         {

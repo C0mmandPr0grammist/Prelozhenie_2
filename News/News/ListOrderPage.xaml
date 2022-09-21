@@ -25,7 +25,7 @@
                                         </Frame>
                                         <Label WidthRequest="180" Text="{Binding Address}" TextColor="White" FontFamily="Comfortaa"/>
                                         <Label WidthRequest="70" Text="{Binding Price}" TextColor="White" FontSize="18" Margin="0, 0, 10, 0"/>
-                                        <ImageButton Source="message.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                                        <ImageButton Source="message.png" Clicked="To_Chat" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
                                     </FlexLayout>
                                 </ViewCell>
                             </DataTemplate>

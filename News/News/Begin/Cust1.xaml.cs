@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace News.Education
+namespace News.Begin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Exec1 : ContentPage
+    public partial class Cust1 : ContentPage
     {
-        public Exec1()
+        public Cust1()
         {
             InitializeComponent();
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new MainPage(true));
+            await Navigation.PushModalAsync(new Customer.MainPage(true));
         }
     }
 }

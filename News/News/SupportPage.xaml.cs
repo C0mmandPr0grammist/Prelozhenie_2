@@ -54,7 +54,7 @@ namespace News
                     }
                     else
                     {
-                        content_Page.TranslateTo(0, 0, 50, Easing.CubicOut);
+                        content_Page.TranslateTo(0, 0, 150, Easing.CubicOut);
                         arrow_Btn.RotateTo(0, 100);
                         Frame_Support.CornerRadius = 0;
                     }
@@ -64,7 +64,17 @@ namespace News
 
         private async void Back(object sender, EventArgs e)
         {
-            await Navigation.PopModalAsync();
+            if(arrow_Btn.Rotation == 0)
+            {
+                arrow_Btn.RotateTo(180, 100);
+                await Navigation.PopModalAsync();
+            } else
+            {
+                await content_Page.TranslateTo(0, 0, 150);
+                await arrow_Btn.RotateTo(0, 100);
+                Frame_Support.CornerRadius = 0;
+            }
+            
         }
 
         private async void To_chat(object sender, EventArgs e)

@@ -5,13 +5,13 @@
              x:Name="content_Page"
              BackgroundColor="Transparent">
     <ContentPage.Content>
-        <Frame x:Name="frame_Profile" Padding="30, 24" BackgroundColor="#212121" CornerRadius="15">
+        <Frame x:Name="frame_Profile" Padding="30, 24" BackgroundColor="#212121" CornerRadius="0">
             <Frame.GestureRecognizers>
                 <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"/>
             </Frame.GestureRecognizers>
             <StackLayout>
                 <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
-                    <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20"/>
+                    <ImageButton Clicked="Back" Source="arrow.png" x:Name="arrowBtn" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20"/>
                     <Label Text="Профиль" TextColor="White" FontFamily="Comfortaa" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Title"/>
                 </FlexLayout>
                 <Frame Margin="0, 0, 0, 30" BackgroundColor="#333" CornerRadius="20">

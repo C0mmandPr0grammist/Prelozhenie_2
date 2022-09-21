@@ -10,19 +10,18 @@ using Xamarin.Forms.Xaml;
 namespace News.Education
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EducationExec2 : ContentPage
+    public partial class EducationCust2 : ContentPage
     {
-        public EducationExec2()
+        public EducationCust2()
         {
             InitializeComponent();
             content.BackgroundColor = Color.FromRgba(0, 0, 0, .5);
-            
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await content.FadeTo(0, 200);
-            Application.Current.MainPage = new NavigationPage(new MainPage(false));
+            Application.Current.MainPage = new NavigationPage(new Customer.MainPage(false));
         }
         protected override bool OnBackButtonPressed()
         {

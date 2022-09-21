@@ -23,5 +23,9 @@ namespace News.Education
             await content.FadeTo(0, 200);
             await Navigation.PushModalAsync(new EducationExec2(), false);
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

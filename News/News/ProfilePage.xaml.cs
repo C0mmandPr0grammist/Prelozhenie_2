@@ -19,6 +19,7 @@ namespace News
 
         private async void Back(object sender, EventArgs e)
         {
+            arrowBtn.RotateTo(180, 100);
             await Navigation.PopModalAsync();
         }
 
@@ -59,6 +60,11 @@ namespace News
                     }
                     break;
             }
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Education.Profile(), false);
         }
     }
 }

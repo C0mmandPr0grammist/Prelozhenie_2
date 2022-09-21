@@ -1,4 +1,5 @@
-﻿using System;
+﻿using News.Customer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,16 @@ namespace News
     public partial class ListOrderPage : ContentPage
     {
 
-        public List<CurrentOrder> currentOrders { get; set; }
+        public List<OrderList> currentOrders { get; set; }
         public ListOrderPage(double height)
         {
             InitializeComponent();
-            currentOrders = new List<CurrentOrder>
+            currentOrders = new List<OrderList>
             {
-                new CurrentOrder{Img = "man.png", Address = "Проспект Мира 31", Price="2200р"},
-                new CurrentOrder{Img = "man.png", Address = "Проспект Ленина 34", Price="900р"},
-                new CurrentOrder{Img = "man.png", Address = "Улица Орехова 70", Price="1890р"},
-                new CurrentOrder{Img = "man.png", Address = "Улица Советская 16", Price="2000р"},
+                new OrderList{Img = "man.png", Address = "Проспект Мира 31", Price="2200р"},
+                new OrderList{Img = "man.png", Address = "Проспект Ленина 34", Price="900р"},
+                new OrderList{Img = "man.png", Address = "Улица Орехова 70", Price="1890р"},
+                new OrderList{Img = "man.png", Address = "Улица Советская 16", Price="2000р"},
             };
             this.BindingContext = this;
             content_Page.TranslationY = height / 2;
@@ -70,16 +71,31 @@ namespace News
             }
         }
 
+        private async void To_Chat(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Chat("man.png", "Василий"));
+        }
+
         private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            CurrentOrder selectedOrder = e.Item as CurrentOrder;
+           OrderList selectedOrder = e.Item as OrderList;
             list.SelectedItem = null;
-            //await Navigation.PushModalAsync(new Specific_OrderPage(selectedOrder));
+            await Navigation.PushModalAsync(new CreateOrderPage(selectedOrder, false));
         }
 
         private async void Back(object sender, EventArgs e)
         {
-            await Navigation.PopModalAsync();
+            if (arrow_Btn.Rotation == 0)
+            {
+                arrow_Btn.RotateTo(180, 100);
+                await Navigation.PopModalAsync();
+            }
+            else
+            {
+                await content_Page.TranslateTo(0, 0, 150);
+                await arrow_Btn.RotateTo(0, 100);
+                frame_Content.CornerRadius = 0;
+            }
         }
     }
 

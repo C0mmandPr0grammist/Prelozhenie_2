@@ -83,5 +83,11 @@ namespace News
                 isOpenMenu = true;
             }
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            System.Environment.Exit(0);
+            return true;
+        }
     }
 }

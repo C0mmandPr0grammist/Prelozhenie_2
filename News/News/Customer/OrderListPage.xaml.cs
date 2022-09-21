@@ -74,5 +74,7 @@ namespace News.Customer
     {
         public string Img { get; set; }
         public string Category { get; set; }
+        public string Price { get; set; }
+        public string Address { get; set; }
     }
 }

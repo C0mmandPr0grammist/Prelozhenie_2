@@ -1,4 +1,5 @@
-﻿using System;
+﻿using News.Education;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,13 @@ namespace News.Customer
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        public MainPage(bool first)
         {
             InitializeComponent();
+            if(first)
+            {
+                Navigation.PushModalAsync(new EducationCust1(), false);
+            }
         }
         private async void OpenProfile(object sender, EventArgs e)
         {
@@ -36,6 +41,11 @@ namespace News.Customer
         private async void image_button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new OrderListPage());
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            System.Environment.Exit(0);
+            return true;
         }
     }
 
