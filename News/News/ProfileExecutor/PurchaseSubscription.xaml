@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfileExecutor.PurchaseSubscription"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout Padding="30, 24, 30, 48">
+        <StackLayout.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#515151"
+                          Offset="0.1" />
+                <GradientStop Color="#1A1A1A"
+                          Offset="1.0" />
+            </RadialGradientBrush>
+        </StackLayout.Background>
+        <FlexLayout Margin="0, 0, 0, 80" JustifyContent="SpaceBetween" AlignItems="Center">
+            <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+            <Label Text="Подписка" FontSize="26" FontAttributes="Bold" FontFamily="Comfortaa" TextColor="White"/>
+            <ImageButton Source="question.png" BackgroundColor="Transparent"/>
+        </FlexLayout>
+        <CarouselView ItemsSource="{Binding Subscriptions}" Loop="False" IndicatorView="indicator">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Image Source="{Binding img}"/>
+                        <Label Text="{Binding data}"/>
+                        <StackLayout Orientation="Horizontal">
+                            <FlexLayout>
+                                <Image Source="coin.png"/>
+                                <Label FontFamily="Comfortaa" Text="{Binding price}"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        
+        <IndicatorView 
+            x:Name="indicator"
+            IndicatorColor="LightGray"
+            SelectedIndicatorColor="DarkGray"
+            HorizontalOptions="Center"/>
+    </StackLayout>
+    
+</ContentPage>

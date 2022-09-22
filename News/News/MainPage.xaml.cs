@@ -21,7 +21,7 @@ namespace News
             InitializeComponent();
             if(first)
             {
-                Navigation.PushModalAsync(new EducationExec1(), false);
+                Navigation.PushModalAsync(new EducationExec1(), true);
             }
         }
 
@@ -51,7 +51,8 @@ namespace News
 
         private async void OpenProfile(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new ProfilePage());
+            
+            await Navigation.PushAsync(new ProfilePage(content.Width, true));
         }
 
         private async void OpenSupport(object sender, EventArgs e)

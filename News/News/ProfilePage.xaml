@@ -1,63 +1,105 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              x:Class="News.ProfilePage"
              x:Name="content_Page"
-             BackgroundColor="Transparent">
-    <ContentPage.Content>
-        <Frame x:Name="frame_Profile" Padding="30, 24" BackgroundColor="#212121" CornerRadius="0">
-            <Frame.GestureRecognizers>
-                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"/>
-            </Frame.GestureRecognizers>
-            <StackLayout>
-                <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
-                    <ImageButton Clicked="Back" x:Name="arrowBtn" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20"/>
-                    <Label Text="Профиль" TextColor="White" FontFamily="Comfortaa" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Title"/>
-                </FlexLayout>
-                <Frame Margin="0, 0, 0, 30" BackgroundColor="#333" CornerRadius="20">
-                    <StackLayout>
-                        <ImageButton Source="man.png" CornerRadius="50" BackgroundColor="Transparent" Aspect="AspectFill" WidthRequest="100" HeightRequest="100" BorderColor="Orange" BorderWidth="3" HorizontalOptions="Center"/>
-                        <Label Text="Александр Краков" TextColor="White" FontSize="Subtitle" FontFamily="Comfortaa" HorizontalOptions="Center"/>
-                    </StackLayout>
-                </Frame>
-
+             BackgroundColor="Transparent"
+             NavigationPage.HasNavigationBar="False">
+    <Frame x:Name="frame_Profile" Padding="30, 24" BackgroundColor="#212121">
+        <Frame.GestureRecognizers>
+            <SwipeGestureRecognizer Swiped="SwipeGestureRecognizer_Swiped"/>
+        </Frame.GestureRecognizers>
+        <StackLayout>
+            <FlexLayout Margin="0, 0, 0, 29" AlignItems="Center">
+                <ImageButton Clicked="Back" x:Name="arrowBtn" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20"/>
+                <Label Text="Профиль" TextColor="White" FontFamily="Comfortaa" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Title"/>
+            </FlexLayout>
+            <Frame Margin="0, 0, 0, 29" CornerRadius="20" BackgroundColor="#323232" Padding="0, 27, 0, 0">
                 <StackLayout>
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                    </StackLayout.GestureRecognizers>
-                    <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
-                        <Image Margin="0, 0, 30, 0" Source="time.png" WidthRequest="50" HeightRequest="50"/>
-                        <Label Text="Смена 8 часов" TextColor="White" FontFamily="Comfortaa" FontSize="20"/>
+                    <FlexLayout Margin="0, 0, 0, 15" AlignItems="Center" JustifyContent="SpaceEvenly">
+                        <ImageButton BackgroundColor="Transparent" Source="edit.png"/>
+                        <ImageButton BorderWidth="3" BorderColor="Orange" Source="man.png" BackgroundColor="Black" WidthRequest="100" HorizontalOptions="Center" Aspect="AspectFill" HeightRequest="100" CornerRadius="50"/>
+                        <ImageButton BackgroundColor="Transparent" Source="settings.png"/>
                     </FlexLayout>
-                    <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
-                        <Image Margin="0, 0, 30, 0" Source="mmr.png" WidthRequest="50" HeightRequest="50"/>
-                        <Label Text="2500" TextColor="White" FontFamily="Comfortaa" FontSize="20"/>
-                    </FlexLayout>
-                    <FlexLayout Margin="0, 0, 0, 50" AlignItems="Center">
-                        <Image Margin="0, 0, 30, 0" Source="coin.png" WidthRequest="50" HeightRequest="50"/>
-                        <Label Text="1000" TextColor="White" FontFamily="Comfortaa" FontSize="20"/>
-                    </FlexLayout>
+                    <Label Margin="0, 0, 0, 20" Text="Имя Фамилия" TextColor="White" FontFamily="Comfortaa" FontSize="26" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
+                    <Button Clicked="paySubscription_Clicked" x:Name="paySubscription" Text="Приобрести подписку" TextColor="White" BackgroundColor="#FF821E" FontFamily="Comfortaa" WidthRequest="400" HeightRequest="50"  Margin="0" Padding="0"/>
+                    <Button Clicked="paySubscription_Clicked" x:Name="trueSubscription" Text="Подписка 30 дней" TextColor="White" FontFamily="Comfortaa" BackgroundColor="#10BE76" WidthRequest="400" HeightRequest="50" Margin="0" Padding="0"></Button>
+                    <forms:AnimationView
+                        x:Name="animationView"
+                        Animation="Clock_sand.json"
+                        AnimationSource="EmbeddedResource"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        BackgroundColor="#10BE76"
+                        OnFinishedAnimation="animationView_OnFinishedAnimation"/>    
                 </StackLayout>
-
+            </Frame>
+            <ScrollView>
                 <StackLayout>
-                    <Frame CornerRadius="20" Padding="0">
-                        <FlexLayout BackgroundColor="White">
-                            <StackLayout Padding="7" BackgroundColor="#333333" FlexLayout.Grow="1" Margin="0, 0, 1, 0">
-                                <Label FontSize="14" HorizontalTextAlignment="Center" TextColor="White" Text="Выполнено" FontFamily="Comfortaa"/>
-                                <Label FontSize="26" HorizontalTextAlignment="Center" TextColor="White" Text="30" FontFamily="Comfortaa"/>
-                            </StackLayout>
-                            <StackLayout Padding="7" BackgroundColor="#333333" FlexLayout.Grow="1" Margin="0, 0, 1, 0">
-                                <Label FontSize="14" HorizontalTextAlignment="Center" TextColor="White" Text="Выполнено" FontFamily="Comfortaa"/>
-                                <Label FontSize="26" HorizontalTextAlignment="Center" TextColor="White" Text="30" FontFamily="Comfortaa"/>
-                            </StackLayout>
-                            <StackLayout Padding="7" BackgroundColor="#333333" FlexLayout.Grow="1">
-                                <Label FontSize="14" HorizontalTextAlignment="Center" TextColor="White" Text="Выполнено" FontFamily="Comfortaa"/>
-                                <Label FontSize="26" HorizontalTextAlignment="Center" TextColor="White" Text="30" FontFamily="Comfortaa"/>
-                            </StackLayout>
+                    <StackLayout Margin="0, 0, 0, 30" Orientation="Horizontal">
+                        <FlexLayout x:Name="stat1" AlignItems="Center">
+                            <Image Margin="0, 0, 10, 0" WidthRequest="50" HeightRequest="50" Source="coin.png"/>
+                            <Label x:Name="widthLabel" FontFamily="Comfortaa" TextColor="White" Text="1000"/>
+                        </FlexLayout>
+                        <FlexLayout  AlignItems="Center">
+                            <Image Margin="0, 0, 10, 0" WidthRequest="50" HeightRequest="50" Source="mmr_black.png"/>
+                            <Label FontFamily="Comfortaa" TextColor="White" Text="1000"/>
+                        </FlexLayout>
+                    </StackLayout>
+                    <StackLayout Margin="0, 0, 0, 30" Orientation="Horizontal">
+                        <FlexLayout x:Name="stat2" AlignItems="Center">
+                            <Image Margin="0, 0, 10, 0" WidthRequest="50" HeightRequest="50" Source="diamond.png"/>
+                            <Label FontFamily="Comfortaa" TextColor="White" Text="10"/>
+                        </FlexLayout>
+                        <FlexLayout AlignItems="Center">
+                            <Image Margin="0, 0, 10, 0" WidthRequest="50" HeightRequest="50" Source="league.png"/>
+                            <Label FontFamily="Comfortaa" TextColor="White" Text="Бронза"/>
+                        </FlexLayout>
+                    </StackLayout>
+
+
+                    <Frame Margin="0, 0, 0, 30" BackgroundColor="#323232" CornerRadius="20" Padding="16, 20">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </Frame.GestureRecognizers>
+                        <FlexLayout JustifyContent="SpaceBetween">
+                            <Image Source="thug_hand.png"/>
+                            <Label Text="Обо мне" TextColor="White" FontFamily="Comfortaa" FontSize="16" />
+                            <Image Source="arrow.png" WidthRequest="15" Rotation="-90"/>
+                        </FlexLayout>
+                    </Frame>
+                    <Frame Margin="0, 0, 0, 30" BackgroundColor="#323232" CornerRadius="20" Padding="16, 20">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </Frame.GestureRecognizers>
+                        <FlexLayout JustifyContent="SpaceBetween">
+                            <Image Source="achievement.png"/>
+                            <Label Text="Достижения" TextColor="White" FontFamily="Comfortaa" FontSize="16" />
+                            <Image Source="arrow.png" WidthRequest="15" Rotation="-90"/>
+                        </FlexLayout>
+                    </Frame>
+                    <Frame Margin="0, 0, 0, 30" BackgroundColor="#323232" CornerRadius="20" Padding="16, 20">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </Frame.GestureRecognizers>
+                        <FlexLayout JustifyContent="SpaceBetween">
+                            <Image Source="card.png"/>
+                            <Label Text="Пополнить" TextColor="White" FontFamily="Comfortaa" FontSize="16" />
+                            <Image Source="arrow.png" WidthRequest="15" Rotation="-90"/>
+                        </FlexLayout>
+                    </Frame>
+                    <Frame Margin="0, 0, 0, 30" BackgroundColor="#323232" CornerRadius="20" Padding="16, 20">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </Frame.GestureRecognizers>
+                        <FlexLayout JustifyContent="SpaceBetween">
+                            <Image Source="exclamation_point.png"/>
+                            <Label Text="Стать партнёром" TextColor="White" FontFamily="Comfortaa" FontSize="16" />
+                            <Image Source="arrow.png" WidthRequest="15" Rotation="-90"/>
                         </FlexLayout>
                     </Frame>
                 </StackLayout>
-            </StackLayout>
-        </Frame>
-    </ContentPage.Content>
+            </ScrollView>
+        </StackLayout>
+    </Frame>
 </ContentPage>
