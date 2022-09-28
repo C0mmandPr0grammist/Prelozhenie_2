@@ -17,28 +17,40 @@
             <Label Text="Подписка" FontSize="26" FontAttributes="Bold" FontFamily="Comfortaa" TextColor="White"/>
             <ImageButton Source="question.png" BackgroundColor="Transparent"/>
         </FlexLayout>
+
         <CarouselView ItemsSource="{Binding Subscriptions}" Loop="False" IndicatorView="indicator">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
                         <Image Source="{Binding img}"/>
-                        <Label Text="{Binding data}"/>
-                        <StackLayout Orientation="Horizontal">
-                            <FlexLayout>
+                        <Label TextColor="White" FontFamily="Comfortaa" FontSize="40" FontAttributes="Bold" HorizontalTextAlignment="Center" Text="{Binding data}"/>
+                        <StackLayout Margin="0, 0, 0, 20" VerticalOptions="EndAndExpand" Padding="45, 0" Orientation="Horizontal">
+                            <FlexLayout HorizontalOptions="CenterAndExpand" AlignItems="Center" HeightRequest="48" x:Name="CoinFlex" VerticalOptions="EndAndExpand">
                                 <Image Source="coin.png"/>
-                                <Label FontFamily="Comfortaa" Text="{Binding price}"/>
+                                <Label Margin="7, 0, 0, 0" FontFamily="Comfortaa" TextColor="White" FontSize="16" Text="{Binding price}"/>
                             </FlexLayout>
+                            <ListView RowHeight="48" IsEnabled="False" HorizontalScrollBarVisibility="Never" ItemsSource="{Binding buns}" SeparatorColor="Transparent">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Label HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" FontFamily="Comfortaa" FontSize="16" Text="{Binding}"/>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
                         </StackLayout>
+                        <Button Clicked="Button_Clicked" Margin="45, 0, 45, 24" CornerRadius="20" BackgroundColor="#FF821E" Text="Приобрести" TextColor="White" FontFamily="Comfortaa"/>
                     </StackLayout>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-        
+
         <IndicatorView 
             x:Name="indicator"
-            IndicatorColor="LightGray"
-            SelectedIndicatorColor="DarkGray"
-            HorizontalOptions="Center"/>
+            IndicatorColor="White"
+            SelectedIndicatorColor="#FF821E"
+            HorizontalOptions="Center"
+            IndicatorSize="15"/>
     </StackLayout>
     
 </ContentPage>

@@ -7,17 +7,7 @@
              x:Name="content">
     <StackLayout>
         <AbsoluteLayout HorizontalOptions="Center">
-            <Image Source="header.png" HeightRequest="39" HorizontalOptions="Center"/>
-            <FlexLayout AlignItems="Center" VerticalOptions="CenterAndExpand" Padding="30, 0, 30, 0" >
-                <FlexLayout FlexLayout.Grow="1" AlignItems="Center">
-                    <Image Source="coin_header.png" Margin="0, 0, 10, 0"/>
-                    <Label x:Name="labelHeight" Text="1200" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
-                </FlexLayout>
-                <FlexLayout JustifyContent="End" AlignItems="Center" FlexLayout.Grow="1">
-                    <Image Source="mmr_header.png" Margin="0, 0, 10, 0"/>
-                    <Label Text="1800" TextColor="White" FontSize="16" FontFamily="Comfortaa"/>
-                </FlexLayout>
-            </FlexLayout>
+            
         </AbsoluteLayout>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
             <Button BackgroundColor="Red" WidthRequest="50" HeightRequest="50" CornerRadius="50" Text="Я" TextColor="White"/>

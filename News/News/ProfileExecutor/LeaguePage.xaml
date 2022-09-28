@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfileExecutor.LeaguePage"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout Padding="30, 24" BackgroundColor="#1A1A1A">
+        <FlexLayout Margin="0, 0, 0, 80" JustifyContent="SpaceBetween" AlignItems="Center">
+            <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+            <Label Text="Ваша лига" FontSize="26" FontAttributes="Bold" FontFamily="Comfortaa" TextColor="White"/>
+            <ImageButton Source="question.png" BackgroundColor="Transparent"/>
+        </FlexLayout>
+        <Image WidthRequest="250" Source="leagueGold.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Frame BackgroundColor="#323232" CornerRadius="20" Padding="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <StackLayout>
+                <Label Padding="0, 32, 0, 40" Text="Бронза" TextColor="White" FontFamily="Comfortaa" FontSize="26" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                <Button Clicked="Button_Clicked" Text="Приобрести подписку" TextColor="White" BackgroundColor="#FF821E" FontFamily="Comfortaa" WidthRequest="400" HeightRequest="50"  Margin="0" Padding="0"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

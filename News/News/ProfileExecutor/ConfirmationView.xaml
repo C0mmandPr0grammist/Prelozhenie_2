@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfileExecutor.ConfirmationView"
+             x:Name="content"
+             Scale="0">
+    <Frame CornerRadius="20" Margin="36, 0" VerticalOptions="CenterAndExpand" BackgroundColor="White" HorizontalOptions="CenterAndExpand">
+        <StackLayout>
+            <Label FontFamily="Comfortaa" FontSize="31" FontAttributes="Bold" TextColor="Black" Margin="0, 0, 0, 20" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="Приобрести?"/>
+            <FlexLayout Margin="0, 0, 0, 37" JustifyContent="Center" AlignItems="Center">
+                <Image Margin="0, 0, 16, 0" Source="coin.png"/>
+                <Label Margin="0, 0, 5, 0" FontFamily="Comfortaa"  Text="1000" TextColor="#0CB570" FontAttributes="Bold" FontSize="16"/>
+                <Label Margin="0, 0, 5, 0" FontFamily="Comfortaa" FontAttributes="Bold" FontSize="16">-</Label>
+                <Label Margin="0, 0, 5, 0" FontFamily="Comfortaa" FontAttributes="Bold" FontSize="16" Text="280" TextColor="#DC1400"/>
+                <Label Margin="0, 0, 5, 0" FontFamily="Comfortaa" FontAttributes="Bold" FontSize="16" Text="= 720"/>
+            </FlexLayout>
+            <FlexLayout  JustifyContent="SpaceBetween">
+                <Button Clicked="Back" Text="Нет" CornerRadius="25" BorderWidth="2" BorderColor="Black" BackgroundColor="White" FontSize="16" FontFamily="Comfortaa"/>
+                <Button Clicked="Button_Clicked" Text="Да" CornerRadius="25" BorderWidth="2" BorderColor="#FF821E" BackgroundColor="#FF821E" FontSize="16" FontFamily="Comfortaa"/>
+            </FlexLayout>
+        </StackLayout>
+    </Frame>
+</ContentPage>

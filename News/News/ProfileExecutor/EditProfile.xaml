@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfileExecutor.EditProfile"
+             BackgroundColor="#1A1A1A"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <StackLayout Padding="30, 24">
+            <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
+                <ImageButton Source="arrow.png" Clicked="Back" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+                <Label FlexLayout.Grow="1" x:Name="label_Order" TextColor="White" FontSize="24" FontFamily="Comfortaa" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Редактировать"/>
+            </FlexLayout>
+            <ImageButton Margin="0,0, 0, 38" BackgroundColor="#1A1A1A" Source="photo_edit.png" HorizontalOptions="CenterAndExpand"/>
+
+            <Frame CornerRadius="20" Padding="10" Margin="0, 0, 0, 23" BackgroundColor="#323232">
+                <Entry x:Name="One_Input" TextChanged="Entry_TextChanged" BackgroundColor="#323232" TextColor="White" Placeholder="Имя" PlaceholderColor="#707070"/>
+            </Frame>
+            <Frame CornerRadius="20" Padding="10" Margin="0, 0, 0, 23" BackgroundColor="#323232">
+                <Entry x:Name="Two_Input" IsEnabled="False" TextChanged="Entry_TextChanged_1" BackgroundColor="#323232" TextColor="White" Placeholder="Имя" PlaceholderColor="#707070"/>
+            </Frame>
+            <Frame CornerRadius="20" Padding="10" Margin="0, 0, 0, 23" BackgroundColor="#323232">
+                <Entry x:Name="Three_Input" IsEnabled="False" TextChanged="Entry_TextChanged_2" BackgroundColor="#323232" TextColor="White" Placeholder="Имя" PlaceholderColor="#707070"/>
+            </Frame>
+            <Frame CornerRadius="20" Padding="10" Margin="0, 0, 0, 23" BackgroundColor="#323232">
+                <Entry x:Name="Four_Input" IsEnabled="False" TextChanged="Entry_TextChanged_3" BackgroundColor="#323232" TextColor="White" Placeholder="Имя" PlaceholderColor="#707070"/>
+            </Frame>
+            <Frame CornerRadius="20" Padding="10" Margin="0, 0, 0, 23" BackgroundColor="#323232">
+                <Entry x:Name="Five_Input" IsEnabled="False" TextChanged="Entry_TextChanged_4" BackgroundColor="#323232" TextColor="White" Placeholder="Имя" PlaceholderColor="#707070"/>
+            </Frame>
+            <Button IsEnabled="False" x:Name="button_Edit" Margin="0, 0, 0, 50" Text="Идентификация" BackgroundColor="#FF821E" TextColor="White" CornerRadius="20"/>
+            <Frame CornerRadius="20" Padding="0">
+                <Frame.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#979BBE"
+                                Offset="0.1" />
+                        <GradientStop Color="#4C4E5F"
+                                Offset="1.00" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+                <FlexLayout HeightRequest="22" BackgroundColor="#979BBE" >
+                    <BoxView x:Name="One" FlexLayout.Grow="1"/>
+                    <BoxView x:Name="Two" FlexLayout.Grow="1"/>
+                    <BoxView x:Name="Three" FlexLayout.Grow="1"/>
+                    <BoxView x:Name="Four" FlexLayout.Grow="1"/>
+                    <BoxView x:Name="Five" FlexLayout.Grow="1"/>
+                </FlexLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

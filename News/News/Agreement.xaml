@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#3A3A3A"
+             x:Class="News.Agreement">
+    <StackLayout>
+        <StackLayout >
+            <FlexLayout BackgroundColor="#1A1A1A" Padding="30, 24" Margin="0, 0, 0, 30" AlignItems="Center">
+                <ImageButton Clicked="Back" x:Name="arrow_Btn" Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                <Label Text="Частые вопросы" TextColor="White" FontSize="Title" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontFamily="Comfortaa"/>
+            </FlexLayout>
+            <ScrollView>
+                <StackLayout Padding="30, 24" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <StackLayout>
+                        <Label FontSize="20" FontAttributes="Bold" Text="Зачему нужна регистрация" TextColor="White" FontFamily="Comfortaa"/>
+                        <Label FontSize="14" Text="Если они не ослеплены похотью, они не выходят наружу виноваты те, кто отказывается от своих обязанностей." TextColor="White" Margin="0, 0, 0, 30" FontFamily="Comfortaa"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label FontSize="20" FontAttributes="Bold" Text="Зачему нужна регистрация" TextColor="White" FontFamily="Comfortaa"/>
+                        <Label FontSize="14" Text="Если они не ослеплены похотью, они не выходят наружу виноваты те, кто отказывается от своих обязанностей." TextColor="White" Margin="0, 0, 0, 30" FontFamily="Comfortaa"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label FontSize="20" FontAttributes="Bold" Text="Зачему нужна регистрация" TextColor="White" FontFamily="Comfortaa"/>
+                        <Label FontSize="14" Text="Если они не ослеплены похотью, они не выходят наружу виноваты те, кто отказывается от своих обязанностей." TextColor="White" Margin="0, 0, 0, 30" FontFamily="Comfortaa"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

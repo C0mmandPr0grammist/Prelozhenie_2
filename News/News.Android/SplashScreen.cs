@@ -17,10 +17,12 @@ namespace News.Droid
     [Activity(Label = "News",
         Icon = "@mipmap/icon",
         Theme = "@style/nuevoTema",
+        NoHistory = true,
         MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize)]
     public class SplashScreen : Activity, Animator.IAnimatorListener
     {
+        bool isOpen = false;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -47,8 +49,11 @@ namespace News.Droid
 
         public void OnAnimationRepeat(Animator animator)
         {
-            StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+            if(!isOpen)
+            {
+                isOpen = true;
+                StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+            }
         }
-        
     }
 }

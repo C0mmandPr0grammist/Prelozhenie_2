@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfileExecutor.CardUp"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Background>
+        <RadialGradientBrush>
+            <GradientStop Offset="0.1" Color="#515151"/>
+            <GradientStop Offset="1.0" Color="#1A1A1A"/>
+        </RadialGradientBrush>
+    </ContentPage.Background>
+    <StackLayout Padding="30, 24">
+        <FlexLayout Margin="0, 0, 0, 20" JustifyContent="SpaceBetween" AlignItems="Center">
+            <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+            <Label Text="Пополнить" FontSize="26" FontAttributes="Bold" FontFamily="Comfortaa" TextColor="White"/>
+            <ImageButton Source="question.png" BackgroundColor="Transparent"/>
+        </FlexLayout>
+        <ScrollView>
+            <StackLayout>
+                <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center" JustifyContent="SpaceBetween">
+                    <Frame WidthRequest="140" Padding="7" CornerRadius="20" BackgroundColor="#1A1A1A">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Image Margin="0, 52, 0, 13" Source="moneyTight.png" HorizontalOptions="CenterAndExpand"/>
+                            <FlexLayout JustifyContent="End" AlignItems="Center">
+                                <Label FontSize="24" Text="300" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa"/>
+                                <Label Text="+" BackgroundColor="Transparent" TextColor="#C39346" FontSize="30"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout>
+                        <Label Text="Пополнить" TextColor="White" FontFamily="Comfortaa" FontSize="26" FontAttributes="Bold"/>
+                        <Line BackgroundColor="#707070" HorizontalOptions="CenterAndExpand" WidthRequest="160" HeightRequest="2"/>
+                        <Label Text="300 руб." HorizontalTextAlignment="Center" FontSize="26" TextColor="White" FontFamily="Comfortaa"/>
+                    </StackLayout>
+                </FlexLayout>
+
+                <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center" JustifyContent="SpaceBetween">
+                    <Frame WidthRequest="140" Padding="7" CornerRadius="20" BackgroundColor="#1A1A1A">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Image Margin="0, 52, 0, 13" Source="moneyTight.png" HorizontalOptions="CenterAndExpand"/>
+                            <FlexLayout JustifyContent="End" AlignItems="Center">
+                                <Label FontSize="24" Text="300" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa"/>
+                                <Label Text="+" BackgroundColor="Transparent" TextColor="#C39346" FontSize="30"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout>
+                        <Label Text="Пополнить" TextColor="White" FontFamily="Comfortaa" FontSize="26" FontAttributes="Bold"/>
+                        <Line BackgroundColor="#707070" HorizontalOptions="CenterAndExpand" WidthRequest="160" HeightRequest="2"/>
+                        <Label Text="300 руб." HorizontalTextAlignment="Center" FontSize="26" TextColor="White" FontFamily="Comfortaa"/>
+                    </StackLayout>
+                </FlexLayout>
+
+                <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center" JustifyContent="SpaceBetween">
+                    <Frame WidthRequest="140" Padding="7" CornerRadius="20" BackgroundColor="#1A1A1A">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Image Margin="0, 52, 0, 13" Source="moneyTight.png" HorizontalOptions="CenterAndExpand"/>
+                            <FlexLayout JustifyContent="End" AlignItems="Center">
+                                <Label FontSize="24" Text="300" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa"/>
+                                <Label Text="+" BackgroundColor="Transparent" TextColor="#C39346" FontSize="30"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout>
+                        <Label Text="Пополнить" TextColor="White" FontFamily="Comfortaa" FontSize="26" FontAttributes="Bold"/>
+                        <Line BackgroundColor="#707070" HorizontalOptions="CenterAndExpand" WidthRequest="160" HeightRequest="2"/>
+                        <Label Text="300 руб." HorizontalTextAlignment="Center" FontSize="26" TextColor="White" FontFamily="Comfortaa"/>
+                    </StackLayout>
+                </FlexLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

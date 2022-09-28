@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfileExecutor.AboutMe"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#1A1A1A">
+    <StackLayout Padding="30, 24">
+        <FlexLayout Margin="0, 0, 0, 30" JustifyContent="SpaceBetween" AlignItems="Center">
+            <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+            <Label Text="Электрик" FontSize="26" FontAttributes="Bold" FontFamily="Comfortaa" TextColor="White"/>
+            <ImageButton Source="question.png" BackgroundColor="Transparent"/>
+        </FlexLayout>
+        <FlexLayout Wrap="Wrap" JustifyContent="SpaceBetween" AlignItems="Center">
+            <Frame FlexLayout.Basis="48%" Margin="0, 0, 0, 22" BackgroundColor="#D46B18" Padding="0, 15" CornerRadius="20">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Frame.GestureRecognizers>
+                <StackLayout>
+                    <Image Margin="0, 0, 0, 26" HorizontalOptions="CenterAndExpand" Source="electrician.png"/>
+                    <Label HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa" Text="Электрик"/>
+                </StackLayout>
+            </Frame>
+            <Frame FlexLayout.Basis="48%" Margin="0, 0, 0, 22" BackgroundColor="#282828" Padding="0, 15" CornerRadius="20">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Frame.GestureRecognizers>
+                <StackLayout>
+                    <Image Margin="0, 0, 0, 26" HorizontalOptions="CenterAndExpand" Source="plumber.png" />
+                    <Label HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa" Text="Электрик"/>
+                </StackLayout>
+            </Frame>
+            <Frame FlexLayout.Basis="48%" Margin="0, 0, 0, 22" BackgroundColor="#282828" Padding="0, 15" CornerRadius="20">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Frame.GestureRecognizers>
+                <StackLayout>
+                    <Image Margin="0, 0, 0, 26" HorizontalOptions="CenterAndExpand" Source="trim.png"/>
+                    <Label HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa" Text="Электрик"/>
+                </StackLayout>
+            </Frame>
+            <Frame FlexLayout.Basis="48%" Margin="0, 0, 0, 22" BackgroundColor="#282828" Padding="0, 15" CornerRadius="20">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Frame.GestureRecognizers>
+                <StackLayout>
+                    <Image Margin="0, 0, 0, 26" HorizontalOptions="CenterAndExpand" Source="electrician.png"/>
+                    <Label HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa" Text="Электрик"/>
+                </StackLayout>
+            </Frame>
+        </FlexLayout>
+    </StackLayout>
+</ContentPage>

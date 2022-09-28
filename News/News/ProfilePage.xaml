@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              x:Class="News.ProfilePage"
              x:Name="content_Page"
-             BackgroundColor="Transparent"
+             BackgroundColor="#212121"
              NavigationPage.HasNavigationBar="False">
-    <Frame x:Name="frame_Profile" Padding="30, 24" BackgroundColor="#212121">
+    <Frame x:Name="frame_Profile" TranslationY="2200" Padding="30, 24" BackgroundColor="#212121">
         <Frame.GestureRecognizers>
             <SwipeGestureRecognizer Swiped="SwipeGestureRecognizer_Swiped"/>
         </Frame.GestureRecognizers>
@@ -17,7 +17,7 @@
             <Frame Margin="0, 0, 0, 29" CornerRadius="20" BackgroundColor="#323232" Padding="0, 27, 0, 0">
                 <StackLayout>
                     <FlexLayout Margin="0, 0, 0, 15" AlignItems="Center" JustifyContent="SpaceEvenly">
-                        <ImageButton BackgroundColor="Transparent" Source="edit.png"/>
+                        <ImageButton Clicked="edit" BackgroundColor="Transparent" Source="edit.png"/>
                         <ImageButton BorderWidth="3" BorderColor="Orange" Source="man.png" BackgroundColor="Black" WidthRequest="100" HorizontalOptions="Center" Aspect="AspectFill" HeightRequest="100" CornerRadius="50"/>
                         <ImageButton BackgroundColor="Transparent" Source="settings.png"/>
                     </FlexLayout>
@@ -48,10 +48,14 @@
                     </StackLayout>
                     <StackLayout Margin="0, 0, 0, 30" Orientation="Horizontal">
                         <FlexLayout x:Name="stat2" AlignItems="Center">
+                           
                             <Image Margin="0, 0, 10, 0" WidthRequest="50" HeightRequest="50" Source="diamond.png"/>
                             <Label FontFamily="Comfortaa" TextColor="White" Text="10"/>
                         </FlexLayout>
                         <FlexLayout AlignItems="Center">
+                            <FlexLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OpenLeague"/>
+                            </FlexLayout.GestureRecognizers>
                             <Image Margin="0, 0, 10, 0" WidthRequest="50" HeightRequest="50" Source="league.png"/>
                             <Label FontFamily="Comfortaa" TextColor="White" Text="Бронза"/>
                         </FlexLayout>
@@ -60,7 +64,7 @@
 
                     <Frame Margin="0, 0, 0, 30" BackgroundColor="#323232" CornerRadius="20" Padding="16, 20">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer />
+                            <TapGestureRecognizer Tapped="OpenAbout"/>
                         </Frame.GestureRecognizers>
                         <FlexLayout JustifyContent="SpaceBetween">
                             <Image Source="thug_hand.png"/>
@@ -70,7 +74,7 @@
                     </Frame>
                     <Frame Margin="0, 0, 0, 30" BackgroundColor="#323232" CornerRadius="20" Padding="16, 20">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer />
+                            <TapGestureRecognizer Tapped="OpenAchive"/>
                         </Frame.GestureRecognizers>
                         <FlexLayout JustifyContent="SpaceBetween">
                             <Image Source="achievement.png"/>
@@ -80,7 +84,7 @@
                     </Frame>
                     <Frame Margin="0, 0, 0, 30" BackgroundColor="#323232" CornerRadius="20" Padding="16, 20">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer />
+                            <TapGestureRecognizer Tapped="OpenCard"/>
                         </Frame.GestureRecognizers>
                         <FlexLayout JustifyContent="SpaceBetween">
                             <Image Source="card.png"/>

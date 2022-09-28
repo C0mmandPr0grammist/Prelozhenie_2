@@ -52,7 +52,7 @@ namespace News
         private async void OpenProfile(object sender, EventArgs e)
         {
             
-            await Navigation.PushAsync(new ProfilePage(content.Width, true));
+            await Navigation.PushAsync(new ProfilePage(content.Width), false);
         }
 
         private async void OpenSupport(object sender, EventArgs e)
@@ -85,10 +85,10 @@ namespace News
             }
         }
 
-        protected override bool OnBackButtonPressed()
-        {
-            System.Environment.Exit(0);
-            return true;
-        }
+        //protected override bool OnBackButtonPressed()
+        //{
+        //    System.Environment.Exit(0);
+        //    return true;
+        //}
     }
 }

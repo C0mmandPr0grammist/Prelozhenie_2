@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfileExecutor.AchievementsPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#1A1A1A">
+    <StackLayout Padding="30, 24">
+        <FlexLayout AlignItems="Center" Margin="0, 0, 0, 30">
+            <ImageButton Clicked="Back" Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Rotation="90"/>
+            <Label FlexLayout.Grow="1" Text="Достижения" HorizontalOptions="Center" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa" FontSize="22"/>
+        </FlexLayout>
+
+        <Label Text="Прогресс лиг:" TextColor="White" Margin="0, 0, 0, 14"/>
+        <FlexLayout Margin="0, 0, 0, 32" JustifyContent="SpaceBetween">
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A"  FlexLayout.Grow="1" Source="achiveSilver.png"/>
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A" FlexLayout.Grow="1" Source="achiveSilver.png"/>
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A" FlexLayout.Grow="1" Source="achiveSilver.png"/>
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A" FlexLayout.Grow="1" Source="achiveSilver.png"/>
+        </FlexLayout>
+
+        <Label Text="Прогресс лиг:" TextColor="White" Margin="0, 0, 0, 14"/>
+        <FlexLayout Margin="0, 0, 0, 32" JustifyContent="SpaceBetween">
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A"  FlexLayout.Grow="1" Source="achiveGreen.png"/>
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A" FlexLayout.Grow="1" Source="achiveGreen.png"/>
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A" FlexLayout.Grow="1" Source="achiveGreen.png"/>
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A" FlexLayout.Grow="1" Source="achiveGreen.png"/>
+        </FlexLayout>
+
+        <Label Text="Прогресс лиг:" TextColor="White" Margin="0, 0, 0, 14"/>
+        <FlexLayout Margin="0, 0, 0, 32" JustifyContent="SpaceBetween">
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A"  FlexLayout.Grow="1" Source="achiveViolet.png"/>
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A" FlexLayout.Grow="1" Source="achiveViolet.png"/>
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A" FlexLayout.Grow="1" Source="achiveViolet.png"/>
+            <ImageButton Clicked="ImageButton_Clicked" BackgroundColor="#1A1A1A" FlexLayout.Grow="1" Source="achiveViolet.png"/>
+        </FlexLayout>
+    </StackLayout>
+</ContentPage>

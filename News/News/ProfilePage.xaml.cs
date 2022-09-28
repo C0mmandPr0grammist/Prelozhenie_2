@@ -18,6 +18,7 @@ namespace News
         public ProfilePage(double width, bool nowBuy = false)
         {
             InitializeComponent();
+            frame_Profile.TranslateTo(0, 0, 600);
             stat1.WidthRequest = width / 2;
             stat2.WidthRequest = width / 2;
             if(isBuy)
@@ -37,12 +38,20 @@ namespace News
                 paySubscription.IsVisible = false;
                 trueSubscription.IsVisible = false;
                 trueSubscription.Opacity = 0;
+            } else
+            {
+                animationView.IsVisible = false;
             }
         }
 
         private async void Back(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
+        }
+
+        private async void edit(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfileExecutor.EditProfile());
         }
 
         private async void SwipeGestureRecognizer_Swiped(object sender, SwipedEventArgs e)
@@ -62,45 +71,23 @@ namespace News
             await Navigation.PushAsync(new ProfileExecutor.PurchaseSubscription());
         }
 
-        //private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
-        //{
-        //    switch (e.StatusType)
-        //    {
-        //        case GestureStatus.Running:
-        //            if (content_Page.TranslationY <= 0)
-        //            {
-        //                if (e.TotalY > 0)
-        //                {
-        //                    content_Page.TranslationY += e.TotalY;
-        //                    frame_Profile.CornerRadius = 15;
-        //                }
-        //                else
-        //                {
-        //                    content_Page.TranslationY = 0;
-        //                    frame_Profile.CornerRadius = 15;
-        //                }
-        //            }
-        //            else
-        //            {
-        //                content_Page.TranslationY += e.TotalY;
-        //                frame_Profile.CornerRadius = 15;
-        //            }
-        //            break;
+        private async void OpenLeague(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfileExecutor.LeaguePage());
+        }
 
-        //        case GestureStatus.Completed:
-        //            if (content_Page.TranslationY > 150)
-        //            {
-        //                arrowBtn.RotateTo(180, 100);
-        //                Navigation.PopModalAsync();
-        //            }
-        //            else
-        //            {
-        //                content_Page.TranslateTo(0, 0, 50, Easing.CubicOut);
-        //                arrowBtn.RotateTo(0, 100);
-        //                frame_Profile.CornerRadius = 0;
-        //            }
-        //            break;
-        //    }
-        //}
+        private async void OpenAbout(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfileExecutor.AboutMe());
+        }
+        private async void OpenAchive(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfileExecutor.AchievementsPage());
+        }
+
+        private async void OpenCard(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfileExecutor.CardUp());
+        }
     }
 }

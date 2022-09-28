@@ -39,14 +39,6 @@
                 </FlexLayout>
             </StackLayout>
         </Frame>
-        <!--<Frame VerticalOptions="EndAndExpand" Padding="0"  Margin="37, 0, 37, 26" BackgroundColor="#222" WidthRequest="302" HeightRequest="70" CornerRadius="20">
-            <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center">
-                <ImageButton Clicked="OpenSupport" Source="support.png" WidthRequest="45" HeightRequest="45" FlexLayout.Grow="1" BackgroundColor="Transparent"/>
-                <ImageButton Clicked="OpenProfile" Source="profile.png" WidthRequest="45" HeightRequest="45" FlexLayout.Grow="1" BackgroundColor="Transparent"/>
-                <ImageButton Clicked="OpenListOrder" Source="list_order.png" WidthRequest="45" HeightRequest="45" FlexLayout.Grow="1" BackgroundColor="Transparent"/>
-                <ImageButton  Source="frog.png" WidthRequest="66" HeightRequest="66" FlexLayout.Grow="1" BackgroundColor="Transparent"/>
-            </FlexLayout>
-        </Frame>-->
 
         <Frame VerticalOptions="EndAndExpand" Margin="36, 0, 36, 26" HeightRequest="70" BackgroundColor="#222" Padding="15, 0" CornerRadius="25">
             <FlexLayout  Padding="0" JustifyContent="SpaceBetween" AlignItems="Center">

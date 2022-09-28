@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfileExecutor.Experience"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="30, 24">
+            <StackLayout.Background>
+                <RadialGradientBrush>
+                    <GradientStop Offset="0.1" Color="#515151"/>
+                    <GradientStop Offset="1.0" Color="#1A1A1A"/>
+                </RadialGradientBrush>
+            </StackLayout.Background>
+            <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
+                <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+                <Label Text="Электрик" FontSize="26" FontAttributes="Bold" FontFamily="Comfortaa" TextColor="White"/>
+                <ImageButton Source="question.png" BackgroundColor="Transparent"/>
+            </FlexLayout>
+            <FlexLayout Margin="0, 0, 0, 40" AlignItems="Center" JustifyContent="SpaceBetween">
+                <Frame Padding="5" CornerRadius="20" BackgroundColor="#1A1A1A">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <Image Margin="0, 0, 0, 13" Source="star.png" HorizontalOptions="Start"/>
+                        <BoxView CornerRadius="50" Margin="21, 0, 21, 40" WidthRequest="98" HeightRequest="98" BackgroundColor="#707070"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout>
+                    <Label Text="Мой стаж" TextColor="White" FontFamily="Comfortaa" FontSize="26" FontAttributes="Bold"/>
+                    <Line BackgroundColor="#707070" HorizontalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="2"/>
+                    <Label Text="Менее года" TextColor="White" FontFamily="Comfortaa"/>
+                </StackLayout>
+            </FlexLayout>
+
+            <FlexLayout Margin="0, 0, 0, 40" AlignItems="Center" JustifyContent="SpaceBetween">
+                <Frame Padding="5" CornerRadius="20" BackgroundColor="#1A1A1A">
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                            <Image Margin="0, 0, 0, 13" Source="star.png" HorizontalOptions="Start"/>
+                            <Image Margin="0, 0, 0, 13" Source="star.png" HorizontalOptions="Start"/>
+                        </StackLayout>
+                        <BoxView CornerRadius="50" Margin="21, 0, 21, 40" WidthRequest="98" HeightRequest="98" BackgroundColor="#707070"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout>
+                    <Label Text="Мой стаж" TextColor="White" FontFamily="Comfortaa" FontSize="26" FontAttributes="Bold"/>
+                    <Line BackgroundColor="#707070" HorizontalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="2"/>
+                    <Label Text="Больше года" TextColor="White" FontFamily="Comfortaa"/>
+                </StackLayout>
+            </FlexLayout>
+
+            <FlexLayout Margin="0, 0, 0, 40" AlignItems="Center" JustifyContent="SpaceBetween">
+                <Frame Padding="5" CornerRadius="20" BackgroundColor="#1A1A1A">
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                            <Image Margin="0, 0, 0, 13" Source="star.png" HorizontalOptions="Start"/>
+                            <Image Margin="0, 0, 0, 13" Source="star.png" HorizontalOptions="Start"/>
+                            <Image Margin="0, 0, 0, 13" Source="star.png" HorizontalOptions="Start"/>
+                        </StackLayout>
+                        <BoxView CornerRadius="50" Margin="21, 0, 21, 40" WidthRequest="98" HeightRequest="98" BackgroundColor="#707070"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout>
+                    <Label Text="Мой стаж" TextColor="White" FontFamily="Comfortaa" FontSize="26" FontAttributes="Bold"/>
+                    <Line BackgroundColor="#707070" HorizontalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="2"/>
+                    <Label Text="Больше 5 лет" TextColor="White" FontFamily="Comfortaa"/>
+                </StackLayout>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

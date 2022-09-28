@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfileExecutor.AchivePage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#1A1A1A">
+    <StackLayout Padding="30, 24">
+        <FlexLayout AlignItems="Center" Margin="0, 0, 0, 30">
+            <ImageButton Clicked="Back" Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Rotation="90"/>
+            <Label FlexLayout.Grow="1" Text="Скороход" HorizontalOptions="Center" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa" FontSize="22"/>
+        </FlexLayout>
+
+        <Line HorizontalOptions="CenterAndExpand" BackgroundColor="#646464" WidthRequest="499" HeightRequest="2"/>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Image Margin="0, 0, 0, 98" Source="achiveSilverBig.png" HorizontalOptions="CenterAndExpand"/>
+            <Label FontFamily="Comfortaa" FontSize="16" HorizontalTextAlignment="Center" WidthRequest="222" Text="Выполнить заказ в тот же день, что и был сделан отклик." TextColor="White"/>
+            <Line Margin="0, 0, 0, 11" HorizontalOptions="CenterAndExpand" BackgroundColor="#646464" WidthRequest="499" HeightRequest="2"/>
+            <Label FontFamily="Comfortaa" Text="Мое второе имя скорость" HorizontalTextAlignment="Center" TextColor="White"/>
+        </StackLayout>
+        <Label VerticalOptions="EndAndExpand" Text="Получено 4 раза" TextColor="White" FontFamily="Comfortaa" HorizontalTextAlignment="Center"/>
+    </StackLayout>
+        
+</ContentPage>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.ProfileExecutor.CardForm"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Background>
+        <RadialGradientBrush>
+            <GradientStop Offset="0.1" Color="#515151"/>
+            <GradientStop Offset="1.0" Color="#1A1A1A"/>
+        </RadialGradientBrush>
+    </ContentPage.Background>
+    <StackLayout Padding="30, 24">
+        <FlexLayout Margin="0, 0, 0, 30" JustifyContent="SpaceBetween" AlignItems="Center">
+            <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+            <Label Text="Электрик" FontSize="26" FontAttributes="Bold" FontFamily="Comfortaa" TextColor="White"/>
+            <ImageButton Source="question.png" BackgroundColor="Transparent"/>
+        </FlexLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="300 руб." HorizontalTextAlignment="Center" TextColor="#FF821E" Margin="0, 0, 0, 46" FontAttributes="Bold" FontSize="60" FontFamily="Comfortaa"/>
+            <Label Text="CARD NUMBER" TextColor="White"/>
+            <StackLayout Margin="0, 0, 0, 40" Orientation="Horizontal">
+                <Frame CornerRadius="4" Padding="10, 0, 0, 0" BackgroundColor="White" HorizontalOptions="FillAndExpand" HeightRequest="48">
+                    <FlexLayout HorizontalOptions="FillAndExpand">
+                        <Entry  x:Name="One" Keyboard="Numeric" TextChanged="One_TextChanged" HeightRequest="48" BackgroundColor="White" FlexLayout.Basis="100%"/>
+                    </FlexLayout>
+                </Frame>
+                
+                <Image Source="visa.png"/>
+            </StackLayout>
+            <Label Text="CARDHOLDER NAME" TextColor="White"/>
+            <Frame Margin="0, 0, 0, 40" CornerRadius="4" Padding="10, 0, 0, 0" HeightRequest="48" HorizontalOptions="FillAndExpand">
+                <Entry Placeholder="Name" TextChanged="nameCard_TextChanged" x:Name="nameCard" BackgroundColor="White" HeightRequest="48" HorizontalOptions="FillAndExpand"/>
+            </Frame>
+
+            <FlexLayout AlignItems="Center">
+                <StackLayout FlexLayout.Grow="1" Orientation="Horizontal">
+                    <StackLayout Margin="0, 0, 10, 0">
+                        <Label Text="EXPIRE DATE" TextColor="White" />
+                        <Frame BackgroundColor="White" CornerRadius="4" HeightRequest="48" Padding="0">
+                            <FlexLayout JustifyContent="SpaceBetween" BackgroundColor="White" WidthRequest="104" HorizontalOptions="Start" AlignItems="Center">
+                                <Entry TextChanged="Entry_TextChanged" MaxLength="2" BackgroundColor="White" FlexLayout.Basis="35%" Margin="10, 0, 0, 0"/>
+                                <Label Text="/" FontSize="20" Margin="0, 0, 5, 0"/>
+                                <Entry TextChanged="Entry_TextChanged_1" x:Name="dataEntry" MaxLength="2" HeightRequest="48" FlexLayout.Basis="30%"/>
+                            </FlexLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="CVV" TextColor="White" />
+                        <Frame Padding="10, 0, 0, 0" BackgroundColor="White" CornerRadius="4" HorizontalOptions="Start" HeightRequest="48" >
+                            <Entry MaxLength="3" x:Name="cvv" WidthRequest="42" HeightRequest="48"/>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+                <FlexLayout HorizontalOptions="EndAndExpand" FlexLayout.Grow="0.7" AlignItems="Center">
+                    <CheckBox Color="White"/>
+                    <Label FontSize="12" TextColor="#FF821E" Text="Сохранить карту"/>
+                </FlexLayout>
+            </FlexLayout>
+        </StackLayout>
+        <Button Text="Далее" Clicked="Button_Clicked" TextColor="White" BackgroundColor="#FF821E" CornerRadius="20"/>
+    </StackLayout>
+</ContentPage>

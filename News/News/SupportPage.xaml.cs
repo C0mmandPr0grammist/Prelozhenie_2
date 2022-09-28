@@ -15,8 +15,8 @@ namespace News
         public SupportPage(double height)
         {
             InitializeComponent();
-            content_Page.TranslationY = height / 2 - 40;
-            Top_content.HeightRequest = height / 2;
+            content_Page.TranslationY = height / 2 + 30;
+            Top_content.HeightRequest = height / 2 - 40;
         }
 
         private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
@@ -79,7 +79,17 @@ namespace News
 
         private async void To_chat(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Chat("frog.png", "Поддержка"));
+            await Navigation.PushModalAsync(new ChatSupports());
+        }
+
+        private async void FAQ(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new FAQ());
+        }
+
+        private async void Agreement(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new FAQ());
         }
     }
 }

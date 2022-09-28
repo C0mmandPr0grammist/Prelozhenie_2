@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace News.ProfileExecutor
@@ -12,6 +13,7 @@ namespace News.ProfileExecutor
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PurchaseSubscription : ContentPage
     {
+        public bool isOpenMenu = true;
         public List<Subscription> Subscriptions { get; set; }
         public PurchaseSubscription()
         {
@@ -28,6 +30,11 @@ namespace News.ProfileExecutor
         private async void Back(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ProfileExecutor.ConfirmationView(this), false);
         }
     }
 
