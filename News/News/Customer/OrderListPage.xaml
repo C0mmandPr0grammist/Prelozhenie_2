@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.Customer.OrderListPage"
+             xmlns:local="clr-namespace:News;assembly=News"
              x:Name="contentOrder"
              BackgroundColor="Transparent"
              NavigationPage.HasNavigationBar="False">
@@ -11,7 +12,7 @@
         </Frame.GestureRecognizers>
         <StackLayout>
             <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
-                <ImageButton Source="arrow.png" Clicked="Back" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20"/>
+                <ImageButton Source="{local:ImageResource News.image.arrow.png}" Clicked="Back" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20"/>
                 <Label FlexLayout.Grow="1" x:Name="label_Order" TextColor="White" FontSize="24" FontFamily="Comfortaa" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Заказать"/>
             </FlexLayout>
             <StackLayout>

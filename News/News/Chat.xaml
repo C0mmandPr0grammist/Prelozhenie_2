@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:News;assembly=News"
              x:Class="News.Chat">
     <StackLayout>
         <FlexLayout x:Name="top" Padding="30, 10" AlignItems="Center" HeightRequest="50" Background="#212121" VerticalOptions="StartAndExpand">
-            <ImageButton Rotation="90" Clicked="Back" BackgroundColor="#212121" Source="arrow.png" WidthRequest="20" HeightRequest="20"/>
+            <ImageButton Rotation="90" Clicked="Back" BackgroundColor="#212121" Source="{local:ImageResource News.image.arrow.png}" WidthRequest="20" HeightRequest="20"/>
             <FlexLayout AlignItems="Center" JustifyContent="Center" FlexLayout.Grow="1" HorizontalOptions="Center">
                 <Frame Padding="0" CornerRadius="50" WidthRequest="50" HeightRequest="50">
                     <Image Aspect="AspectFill" x:Name="imgSrc" Source="frog_tab.png" />

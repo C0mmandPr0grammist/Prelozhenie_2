@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.ProfileExecutor.CardUp"
+             xmlns:local="clr-namespace:News;assembly=News"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Background>
         <RadialGradientBrush>
@@ -11,7 +12,7 @@
     </ContentPage.Background>
     <StackLayout Padding="30, 24">
         <FlexLayout Margin="0, 0, 0, 20" JustifyContent="SpaceBetween" AlignItems="Center">
-            <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+            <ImageButton Clicked="Back" Source="{local:ImageResource News.image.arrow.png}" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
             <Label Text="Пополнить" FontSize="26" FontAttributes="Bold" FontFamily="Comfortaa" TextColor="White"/>
             <ImageButton Source="question.png" BackgroundColor="Transparent"/>
         </FlexLayout>

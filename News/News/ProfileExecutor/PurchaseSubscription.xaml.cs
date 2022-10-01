@@ -20,12 +20,13 @@ namespace News.ProfileExecutor
             InitializeComponent();
             Subscriptions = new List<Subscription>
             {
-                new Subscription{data="1 месяц", buns=new string[]{"+ceрвис"}, img="shield.png", price=280 },
-                new Subscription{data="6 месяцев", buns=new string[]{"+скидка", "+ceрвис"}, img="shield_gray.png", price=600 },
-                new Subscription{data="12 месяцев", buns=new string[]{"+бонусы", "+скидка", "+ceрвис"}, img="shield_orange.png", price=900 },
+                new Subscription{data="1 месяц", buns=new string[]{"+ceрвис"}, img=newImage("map.png"), price=280 },
+                new Subscription{data="6 месяцев", buns=new string[]{"+скидка", "+ceрвис"}, img=newImage("SupportsNServices.png"), price=600 },
+                new Subscription{data="12 месяцев", buns=new string[]{"+бонусы", "+скидка", "+ceрвис"}, img=newImage("SupportsNServices.png"), price=900 },
             };
             this.BindingContext = this;
         }
+        public ImageSource newImage(string IconSource) { return ImageSource.FromResource(string.Format("News.image.{0}", IconSource)); }
 
         private async void Back(object sender, EventArgs e)
         {
@@ -43,6 +44,6 @@ namespace News.ProfileExecutor
         public string data { get; set; }
         public int price { get; set; }
         public string[] buns { get; set; }
-        public string img { get; set; }
+        public ImageSource img { get; set; }
     }
 }

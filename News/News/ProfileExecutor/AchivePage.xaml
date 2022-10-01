@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.ProfileExecutor.AchivePage"
              NavigationPage.HasNavigationBar="False"
+             xmlns:local="clr-namespace:News;assembly=News"
              BackgroundColor="#1A1A1A">
     <StackLayout Padding="30, 24">
         <FlexLayout AlignItems="Center" Margin="0, 0, 0, 30">
-            <ImageButton Clicked="Back" Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Rotation="90"/>
+            <ImageButton Clicked="Back" Source="{local:ImageResource News.image.arrow.png}" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Rotation="90"/>
             <Label FlexLayout.Grow="1" Text="Скороход" HorizontalOptions="Center" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa" FontSize="22"/>
         </FlexLayout>
 

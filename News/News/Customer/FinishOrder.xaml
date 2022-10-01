@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.Customer.FinishOrder"
+             xmlns:local="clr-namespace:News;assembly=News"
              BackgroundColor="#212121"
              NavigationPage.HasNavigationBar="False">
     <FlexLayout Direction="Column" >
         <StackLayout Padding="30, 24">
             <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
-                <ImageButton Clicked="Back" WidthRequest="20" HeightRequest="20" Source="arrow.png" BackgroundColor="Transparent"/>
+                <ImageButton Clicked="Back" WidthRequest="20" HeightRequest="20" Source="{local:ImageResource News.image.arrow.png}" BackgroundColor="Transparent"/>
                 <Label Text="Разместить" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontFamily="Comfortaa" TextColor="White" FontSize="24"/>
             </FlexLayout>
         </StackLayout>

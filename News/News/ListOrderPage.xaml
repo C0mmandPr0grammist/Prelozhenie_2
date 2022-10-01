@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.ListOrderPage"
+             xmlns:local="clr-namespace:News;assembly=News"
              BackgroundColor="Transparent"
              x:Name="content_Page">
     <ContentPage.Content>
@@ -11,7 +12,7 @@
             </Frame.GestureRecognizers>
             <StackLayout>
                 <FlexLayout AlignItems="Center" Margin="0, 0, 0, 30">
-                    <ImageButton Clicked="Back" Rotation="180" x:Name="arrow_Btn" Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                    <ImageButton Clicked="Back" Rotation="180" x:Name="arrow_Btn" Source="{local:ImageResource News.image.arrow.png}" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
                     <Label Text="Текущие заказы" HorizontalTextAlignment="Center" FontSize="Title" TextColor="White" FontFamily="Comfortaa" FlexLayout.Grow="1" HorizontalOptions="Center"/>
                 </FlexLayout>
                 <StackLayout Margin="0, 0, 0, 50">
@@ -21,7 +22,7 @@
                                 <ViewCell>
                                     <FlexLayout AlignItems="Center">
                                         <Frame Margin="0, 0, 10, 0" Padding="0" WidthRequest="50" HeightRequest="50" CornerRadius="50" BorderColor="Orange">
-                                            <Image WidthRequest="100" HeightRequest="80" Aspect="AspectFill" Source="{Binding Img}"/>
+                                            <Image WidthRequest="100" HeightRequest="80" Aspect="AspectFill" Source="{local:ImageResource News.image.man.jpg}"/>
                                         </Frame>
                                         <Label WidthRequest="180" Text="{Binding Address}" TextColor="White" FontFamily="Comfortaa"/>
                                         <Label WidthRequest="70" Text="{Binding Price}" TextColor="White" FontSize="18" Margin="0, 0, 10, 0"/>
@@ -38,19 +39,19 @@
                         <StackLayout>
                             <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
                                 <Frame Margin="0, 0, 10, 0" Padding="0" WidthRequest="50" HeightRequest="50" CornerRadius="50" BorderColor="Orange">
-                                    <Image WidthRequest="100" HeightRequest="80" Aspect="AspectFill" Source="man.png"/>
+                                    <Image WidthRequest="100" HeightRequest="80" Aspect="AspectFill" Source="{local:ImageResource News.image.man.jpg}"/>
                                 </Frame>
                                 <Label WidthRequest="180" Text="Проспект Мира 31," TextColor="White" FontFamily="Comfortaa"/>
                                 <Label Text="7700р" TextColor="White" FontSize="18" Margin="0, 0, 10, 0"/>
-                                <ImageButton Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                                <ImageButton Source="{local:ImageResource News.image.arrow.png}" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
                             </FlexLayout>
                             <FlexLayout Margin="0, 0, 0, 20" AlignItems="Center">
                                 <Frame Margin="0, 0, 10, 0" Padding="0" WidthRequest="50" HeightRequest="50" CornerRadius="50" BorderColor="Orange">
-                                    <Image WidthRequest="100" HeightRequest="80" Aspect="AspectFill" Source="man.png"/>
+                                    <Image WidthRequest="100" HeightRequest="80" Aspect="AspectFill" Source="{local:ImageResource News.image.man.jpg}" />
                                 </Frame>
                                 <Label WidthRequest="180" Text="Проспект Мира 31," TextColor="White" FontFamily="Comfortaa"/>
                                 <Label Text="7700р" TextColor="White" FontSize="18" Margin="0, 0, 10, 0"/>
-                                <ImageButton Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                                <ImageButton Source="{local:ImageResource News.image.arrow.png}" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
                             </FlexLayout>
                         </StackLayout>
                     </ScrollView>

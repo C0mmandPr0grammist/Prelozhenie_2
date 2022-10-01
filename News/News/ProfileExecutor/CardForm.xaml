@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.ProfileExecutor.CardForm"
              NavigationPage.HasNavigationBar="False"
-             >
+             xmlns:local="clr-namespace:News;assembly=News">
     <ContentPage.Background>
         <RadialGradientBrush>
             <GradientStop Offset="0.1" Color="#515151"/>
@@ -12,7 +12,7 @@
     </ContentPage.Background>
     <StackLayout Padding="30, 24">
         <FlexLayout Margin="0, 0, 0, 30" JustifyContent="SpaceBetween" AlignItems="Center">
-            <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+            <ImageButton Clicked="Back" Source="{local:ImageResource News.image.arrow.png}" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
             <Label Text="Электрик" FontSize="26" FontAttributes="Bold" FontFamily="Comfortaa" TextColor="White"/>
             <ImageButton Source="question.png" BackgroundColor="Transparent"/>
         </FlexLayout>

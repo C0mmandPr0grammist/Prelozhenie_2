@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:News;assembly=News"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.ChatSupports">
     <StackLayout>
         <FlexLayout BackgroundColor="#1A1A1A" Padding="30, 24" Margin="0, 0, 0, 30" AlignItems="Center">
-            <ImageButton Clicked="Back" x:Name="arrow_Btn" Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+            <ImageButton Clicked="Back" x:Name="arrow_Btn" Source="{local:ImageResource News.image.arrow.png}" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
             <Label Text="Поддержка" TextColor="White" FontSize="Title" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontFamily="Comfortaa"/>
         </FlexLayout>
 
@@ -12,19 +13,19 @@
         <ScrollView>
             <StackLayout Padding="30, 24">
                 <FlexLayout Margin="0, 0, 0, 23" AlignItems="Start">
-                    <StackLayout>
-                        <ImageButton VerticalOptions="Start" BackgroundColor="AliceBlue" Margin="0, 0, 10, 0" WidthRequest="120" Source="supportFrog.png"/>
+                    <StackLayout VerticalOptions="Start" WidthRequest="120" Margin="0, 0, 10, 0" HeightRequest="60">
+                        <ImageButton VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White" WidthRequest="50" HeightRequest="50" Aspect="Fill" Source="{local:ImageResource News.image.supportFrog.png}"/>
                     </StackLayout>
 
-                    <StackLayout>
+                    <StackLayout FlexLayout.Grow="1">
                         <Label Margin="0, 20, 0, 14"  Text="Поддержка" TextColor="Black" FontSize="14" FontAttributes="Bold"/>
                         <Label Text="Если они не ослеплены похотью, они не выходят наружу виноваты те, кто отказывается от своих обязанностей." TextColor="Black"/>
                     </StackLayout>
                 </FlexLayout>
 
                 <FlexLayout AlignItems="Start">
-                    <StackLayout>
-                        <ImageButton VerticalOptions="Start" BackgroundColor="AliceBlue" Margin="0, 0, 10, 0" WidthRequest="120" HeightRequest="50" CornerRadius="50" BorderColor="Orange" BorderWidth="2"/>
+                    <StackLayout VerticalOptions="Start" WidthRequest="120" Margin="0, 0, 10, 0" HeightRequest="60">
+                        <ImageButton VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="AliceBlue" Margin="0, 0, 10, 0" WidthRequest="50" HeightRequest="50" Aspect="Fill" CornerRadius="50" BorderColor="Orange" BorderWidth="2"/>
                     </StackLayout>
 
                     <StackLayout>
@@ -39,7 +40,7 @@
         <StackLayout Padding="18, 20" VerticalOptions="EndAndExpand" BackgroundColor="#1A1A1A">
             <Frame BackgroundColor="#FF821E" CornerRadius="20" Padding="5">
                 <FlexLayout AlignItems="Center">
-                    <ImageButton Margin="0, 0, 10, 0" Source="camera.png"/>
+                    <ImageButton Margin="0, 0, 10, 0" Source="{local:ImageResource News.image.camera.png}"/>
                     <Editor TextColor="White" Placeholder="Введите сообщение" FlexLayout.Grow="1"/>
                     <BoxView WidthRequest="20" HeightRequest="20" BackgroundColor="White"/>
                 </FlexLayout>

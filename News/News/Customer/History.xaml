@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.Customer.History"
+             xmlns:local="clr-namespace:News;assembly=News"
              x:Name="contentOrder"
              BackgroundColor="Transparent">
     <Frame x:Name="frame_Order" Padding="0" CornerRadius="15" BackgroundColor="#212121">
@@ -11,7 +12,7 @@
         <StackLayout>
             <StackLayout Padding="30, 24, 30, 0">
                 <FlexLayout Margin="0, 0, 0, 10" JustifyContent="SpaceBetween" AlignItems="Center">
-                    <ImageButton Clicked="Back" x:Name="arrow_Btn" Rotation="180" Source="arrow.png" BackgroundColor="#212121" WidthRequest="20" HeightRequest="20"/>
+                    <ImageButton Clicked="Back" x:Name="arrow_Btn" Rotation="180" Source="{local:ImageResource News.image.arrow.png}" BackgroundColor="#212121" WidthRequest="20" HeightRequest="20"/>
                     <Label Text="Ваша заявка" FontSize="26" TextColor="White" FontFamily="Comfortaa" />
                     <ImageButton FlexLayout.AlignSelf="End" Source="message.png" Clicked="OpenChat" BackgroundColor="#212121" WidthRequest="35"/>
                 </FlexLayout>

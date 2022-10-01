@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:News;assembly=News"
              x:Class="News.ProfileExecutor.EditProfile"
              BackgroundColor="#1A1A1A"
              NavigationPage.HasNavigationBar="False">
     <ScrollView>
         <StackLayout Padding="30, 24">
             <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
-                <ImageButton Source="arrow.png" Clicked="Back" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+                <ImageButton Source="{local:ImageResource News.image.arrow.png}" Clicked="Back" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
                 <Label FlexLayout.Grow="1" x:Name="label_Order" TextColor="White" FontSize="24" FontFamily="Comfortaa" HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="Редактировать"/>
             </FlexLayout>
             <ImageButton Margin="0,0, 0, 38" BackgroundColor="#1A1A1A" Source="photo_edit.png" HorizontalOptions="CenterAndExpand"/>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:News;assembly=News"
              x:Class="News.SupportPage"
              x:Name="content_Page"
              BackgroundColor="Transparent">
@@ -11,15 +12,15 @@
         <StackLayout>
             <StackLayout x:Name="Top_content">
                 <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
-                    <ImageButton Clicked="Back" Rotation="180" x:Name="arrow_Btn" Source="arrow.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
+                    <ImageButton Clicked="Back" Rotation="180" x:Name="arrow_Btn" Source="{local:ImageResource News.image.arrow.png}" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent"/>
                     <Label Text="Поддержка" TextColor="White" FontSize="Title" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontFamily="Comfortaa"/>
                 </FlexLayout>
 
                 <Frame CornerRadius="20" Padding="15" x:Name="Frame" BackgroundColor="#333">
                     <StackLayout>
                         <StackLayout WidthRequest="150" Margin="30, 0, 0, 10" HorizontalOptions="Center" Orientation="Horizontal" x:Name="flex">
-                            <Image Source="supportFrog.png" WidthRequest="80" HorizontalOptions="CenterAndExpand" />
-                            <ImageButton VerticalOptions="Center" Clicked="To_chat" Source="message.png" WidthRequest="30" BackgroundColor="#333"/>
+                            <Image Source="{local:ImageResource News.image.supportFrog.png}" WidthRequest="80" HeightRequest="80" Aspect="Fill" HorizontalOptions="CenterAndExpand" />
+                            <ImageButton VerticalOptions="Center" Clicked="To_chat" Source="{local:ImageResource News.image.message.png}" WidthRequest="30" BackgroundColor="#333"/>
                         </StackLayout>
                         <Label Text="Приветствую!" TextColor="White" FontSize="22" HorizontalTextAlignment="Center" FontFamily="Comfortaa"/>
                         <Label 
@@ -36,14 +37,14 @@
                             <TapGestureRecognizer Tapped="FAQ"/>
                         </StackLayout.GestureRecognizers>
                         <Label Margin="0, 0, 0, 20" Text="Частые вопросы" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa"/>
-                        <Image Source="supportQuestion.png" HorizontalOptions="CenterAndExpand"/>
+                        <Image Source="{local:ImageResource News.image.supportQuestion.png}" WidthRequest="46" HeightRequest="37" HorizontalOptions="CenterAndExpand"/>
                     </StackLayout>
                     <StackLayout BackgroundColor="#333" FlexLayout.Basis="49.9%" Padding="0, 22, 0, 22">
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Agreement"/>
                         </StackLayout.GestureRecognizers>
                         <Label Margin="0, 0, 0, 20" Text="Соглашение" HorizontalTextAlignment="Center" TextColor="White" FontFamily="Comfortaa"/>
-                        <Image Source="supportDoc.png" HorizontalOptions="CenterAndExpand"/>
+                        <Image Source="{local:ImageResource News.image.supportDoc.png}" WidthRequest="46" HeightRequest="37" HorizontalOptions="CenterAndExpand"/>
                     </StackLayout>
                 </FlexLayout>
             </Frame>

@@ -1,6 +1,7 @@
 ﻿using News.Customer;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,10 @@ namespace News
             InitializeComponent();
             currentOrders = new List<OrderList>
             {
-                new OrderList{Img = "man.png", Address = "Проспект Мира 31", Price="2200р"},
-                new OrderList{Img = "man.png", Address = "Проспект Ленина 34", Price="900р"},
-                new OrderList{Img = "man.png", Address = "Улица Орехова 70", Price="1890р"},
-                new OrderList{Img = "man.png", Address = "Улица Советская 16", Price="2000р"},
+                new OrderList{Img = "man.jpg", Address = "Проспект Мира 31", Price="2200р"},
+                new OrderList{Img = "man.jpg", Address = "Проспект Ленина 34", Price="900р"},
+                new OrderList{Img = "man.jpg", Address = "Улица Орехова 70", Price="1890р"},
+                new OrderList{Img = "man.jpg", Address = "Улица Советская 16", Price="2000р"},
             };
             this.BindingContext = this;
             content_Page.TranslationY = height / 2;

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:News;assembly=News"
              x:Class="News.Customer.ProfilePage"
              x:Name="content_Page"
              BackgroundColor="Transparent">
@@ -11,7 +12,7 @@
             </Frame.GestureRecognizers>
             <StackLayout>
                 <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
-                    <ImageButton Clicked="Back" Source="arrow.png" x:Name="arrowBtn" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20"/>
+                    <ImageButton Clicked="Back" Source="{local:ImageResource News.image.arrow.png}" x:Name="arrowBtn" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20"/>
                     <Label Text="Профиль" TextColor="White" FontFamily="Comfortaa" FlexLayout.Grow="1" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Title"/>
                 </FlexLayout>
                 <Frame Margin="0, 0, 0, 30" BackgroundColor="#333" CornerRadius="20">

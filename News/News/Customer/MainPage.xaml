@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="News.Customer.MainPage"
              NavigationPage.HasNavigationBar="False"
+             xmlns:local="clr-namespace:News;assembly=News"
              BackgroundImageSource="map.png"
              x:Name="content">
     <StackLayout>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:News;assembly=News"
              x:Class="News.ProfileExecutor.Experience"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
@@ -12,7 +13,7 @@
                 </RadialGradientBrush>
             </StackLayout.Background>
             <FlexLayout Margin="0, 0, 0, 30" AlignItems="Center">
-                <ImageButton Clicked="Back" Source="arrow.png" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
+                <ImageButton Clicked="Back" Source="{local:ImageResource News.image.arrow.png}" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Rotation="90"/>
                 <Label Text="Электрик" FontSize="26" FontAttributes="Bold" FontFamily="Comfortaa" TextColor="White"/>
                 <ImageButton Source="question.png" BackgroundColor="Transparent"/>
             </FlexLayout>

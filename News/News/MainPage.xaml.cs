@@ -42,7 +42,7 @@ namespace News
                     Button_Timer.IsVisible = false;
                     image_button.IsVisible = true;
                     isOpenMenu = true;
-                    image_button.Source = "frog.png";
+                    image_button.Source = ImageSource.FromResource("News.image.frog.png");
                     return false;
                 }
                 return true;
@@ -71,14 +71,14 @@ namespace News
         {
             if (isOpenMenu)
             {
-                image_button.Source = "frog_tab.png";
+                image_button.Source = ImageSource.FromResource("News.image.frog_tab.png");
                 Frame_Menu.IsVisible = true;
                 await Frame_Menu.ScaleTo(1, 150);
                 isOpenMenu = false;
             }
-            else
+            else 
             {
-                image_button.Source = "frog.png";
+                image_button.Source = ImageSource.FromResource("News.image.frog.png");
                 await Frame_Menu.ScaleTo(0, 150);
                 Frame_Menu.IsVisible = false;
                 isOpenMenu = true;
